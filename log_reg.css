@@ -1,0 +1,105 @@
+html
+{
+	font-family: sans-serif;
+}
+
+body{
+	background-image: url('images/Leafs.jpg');
+	background-repeat: no-repeat;
+	background-size: 200% 200%;
+	height:auto;
+	padding:0px;
+	margin:0px;
+}
+.main
+{
+	height:auto;
+	width:87%;
+	margin:5%;
+	margin-bottom:0px;
+	padding:5px;
+	padding-top:3px;
+	padding-bottom:10px;
+	background-color:rgba(255,255,255,0.9);
+}
+
+h3{
+	margin-top:5px;
+	margin-bottom:5px;
+	padding-left:35%;
+	color:#372a73;
+}
+.main a
+{
+	color:#007ac3;
+}
+.main a:hover
+{
+	color:#372a73;
+}
+.main #edit textarea
+{
+	height:100%;
+}
+.buttonStyle
+{
+	background-color:#372a73;
+	text-decoration:none;
+	border-radius:2px;
+	border:0px;
+	font-weight:900;
+	color:white;
+	width:100px;
+	border-radius:0px 0px 5px 5px;
+	padding:3px;
+	margin-right:10px;
+}
+.buttonStyle:hover
+{
+	background-color:#372a73;
+	cursor:pointer;
+}
+.main form p
+{
+	padding:0px;
+	margin:0px;
+	color:#CC0000;
+	display:inline-block;
+}
+.loginPage form
+{
+	width:100%;
+	display:inline-block;
+}
+.loginPage input
+{
+	width:96%;
+	display:inline-block;
+
+}
+.loginPage .buttonStyle 
+{
+	width:25%;
+	float:right;
+	padding-top:1px;
+}
+#toggleBtn
+{
+	margin:0px;
+	margin-left:5%;
+
+	width:90%;
+	margin-bottom:4px;
+	background: repeating-linear-gradient(45deg,
+	rgba(55, 42, 115, 1),
+	rgba(55, 42, 115, 1) 10px,
+	rgba(55, 42, 115, 0.8) 10px,
+	rgba(55, 42, 115, 0.8) 20px);
+}
+#reg
+{
+	display:none;
+}
+#log
+{
+}
