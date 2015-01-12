@@ -11,6 +11,22 @@ body{
 	padding:0px;
 	margin:0px;
 }
+#banner{
+	z-index:100;
+	left:0px;
+	padding:0px;
+	margin:0px;
+	background-color:#007ac3;
+	width:auto;
+	height:25px;
+	margin-top:0px;
+}
+#logo{
+	z-index:200;
+	width:6%;
+	margin-left:5%;
+	margin-top: -20px;
+}
 .main
 {
 	height:auto;

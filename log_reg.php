@@ -8,6 +8,10 @@
 		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
 	</head>
 	<body>
+		<div id="banner"></div>
+		<div id="logo">
+			<img src="images/logo.png">
+		</div>
 		<?php
 				session_start();
 		if (isset($_SESSION['login']))
