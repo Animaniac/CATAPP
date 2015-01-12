@@ -1,0 +1,70 @@
+html
+{
+	font-family: sans-serif;
+}
+
+body{
+	background-image: url('images/Leafs.jpg');
+	background-repeat: no-repeat;
+	background-size: 200% 200%;
+	height:auto;
+	padding:0px;
+	margin:0px;
+}
+#banner{
+	z-index:100;
+	left:0px;
+	padding:0px;
+	margin:0px;
+	background-color:#007ac3;
+	width:auto;
+	height:25px;
+	margin-top:0px;
+}
+#logo{
+	z-index:200;
+	width:6%;
+	margin-left:5%;
+	margin-top: -20px;
+}
+.main
+{
+	margin:5%;
+	margin-bottom:2%;
+	width:90%;
+	height:340px;
+	background-color:white;
+	border:solid 1px black;
+	overflow:scroll;
+	overflow-x: hidden;
+}
+#lbub
+{
+	padding-top:5px;
+	width:50%;
+}
+#rbub
+{
+	margin-left:50%;
+	padding-top:5px;
+	width:50%;
+}
+#tc1
+{
+	margin-left:5%;
+	margin-right:1%;
+}
+#tc2
+{
+
+}
+#footer
+{
+	margin-top:2%;
+	margin-left:10%;
+	width:80%;
+}
+#Accept
+{
+	float:right;
+}
