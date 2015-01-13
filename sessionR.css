@@ -78,7 +78,7 @@ textarea
 	margin-left:5%;
     resize: none;
 	width:88%;
-	height:140px;
+	height:30%;
 }
 footer
 {
@@ -87,7 +87,7 @@ footer
 	padding-top:10px;
 	padding-bottom:10px;
 }
-footer #delete
+footer #back
 {
 	float:left;
 	margin-right:5%;
@@ -101,9 +101,11 @@ footer #edit
 {
 	margin-left:5%;
 	float:right;
+	margin-top:-20px;
 }
-#delete
+#back
 {
+	background-color:white;
 	height:33px;
 	width:34px;
 	background-size: 32px 32px;
@@ -113,5 +115,19 @@ footer #edit
 	border: none;
 	border-radius: 6px;
 	color: transparent;
-	background-image: url('images/delete.png');
+	background-image: url('images/back.png');
+}
+#edit
+{
+	background-color:white;
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/edit.png');
 }

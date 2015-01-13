@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="sessionM.css" />
+		<link rel="stylesheet" href="MoodM.css" />
 		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
 	</head>
 	<body>
@@ -12,54 +12,35 @@
 			<img id="cat" src="images/logo.png">
 			<img id="nhs" src="images/nhs.png">
 		<article class="main">
-			<u><h2>Sessions</h2></u>
+			<u><h2>Mood Manager</h2></u>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
+			<div class="content" id="m"><h3>Mood 1 - 13/01/2015</h3></div>
 			<div class="content" id="s"><img src="images/delete.png"></div>
 			</div></a>
-			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
-			<div class="content" id="s"><img src="images/delete.png"></div>
-			</div></a>
-			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
-			<div class="content" id="s"><img src="images/delete.png"></div>
-			</div></a>
-			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
-			<div class="content" id="s"><img src="images/delete.png"></div>
-			</div></a>
-			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
-			<div class="content" id="s"><img src="images/delete.png"></div>
-			</div></a>
-			<a href=""><div class="content" id="l">
-			<div class="content" id="m"><h3>Session 1 - 13/01/2015</h3></div>
-			<div class="content" id="s"><img src="images/delete.png"></div>
-			</div></a>
+			
 			<footer>
 				<form action="moodM.php">
-				<input type="submit" name="submit" id="MoodMan" value="Mood Manager" class="buttonStyle">
+				<input type="submit" name="submit" id="MoodMan" value="Mood Map" class="buttonStyle">
 				</form>
 			</footer>
 		</article>

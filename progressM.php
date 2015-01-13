@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="sessionR.css" />
+		<link rel="stylesheet" href="home.css" />
 		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
 	</head>
 	<body>
@@ -12,21 +12,19 @@
 			<img id="cat" src="images/logo.png">
 			<img id="nhs" src="images/nhs.png">
 		<article class="main">
-			<u><h2>Session</h2></u>
-			<textarea rows="12" name="post" id="post" disabled>last week I killed an old lady who pissed me off with her stupid wrinkes</textarea>
-			<u><h2>Homework:</h2></u>
-			<textarea rows="12" name="post" id="post" disabled>dont kill people</textarea>
-			<footer>
-				<form action="sessionM.php">
-					<input type="submit" name="back" id="back" value="back" class="buttonStyle">
-				</form>
-				<form>
-						<input type="checkbox" name="done" id="done" class="buttonStyle"><label for="done">homework done?</label>
-				</form>
-				<form action="sessionE.php">
-					<input type="submit" name="edit" id="edit" value="edit" class="buttonStyle">
-				</form>
-			</footer>
+			<u><h2>Progression</h2></u>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Mood Manager</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Recognition</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Revision</h3></div>
+			</div></a>
 		</article>
 		<nav>
 			<a href="home.php"><img src="images/home.png"></a>

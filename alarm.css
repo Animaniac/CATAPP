@@ -81,23 +81,37 @@ nav a img
 }
 #s
 {
+	padding-top:1%;
 	float:left;
 	height:auto;
 	width:auto;
-	color:blue;
-	margin-top:7%;
+	color:#372a73;
 }
 #m
 {
-	margin-top:3%;
 	float:left;
 	height:70%;
-	width:80%;
+	width:70%;
+}
+#m input
+{
+	width:100%;
+}
+#m select, #m lable
+{
+	padding-top:4px;
 }
 #l
 {
 	height:10%;
+	width:95%;
+	margin-top:5px;
+}
+#l2
+{
+	height:10%;
 	width:94%;
+	margin-left:6%;
 }
 h2
 {
@@ -114,10 +128,6 @@ footer
 	padding-top:10px;
 	padding-bottom:10px;
 }
-footer input
-{
-	margin-left:34%;
-}
 #s img
 {
 	width:32px;
@@ -129,4 +139,59 @@ footer input
 #home
 {
 	margin-left:3px;
+}
+form
+{
+	padding:0px;
+	margin:0px;
+	display:inline;
+}
+#type, #sound
+{
+	width:100%;
+}
+footer #back
+{
+	float:left;
+	margin-right:5%;
+	margin-bottom:5px;
+}
+footer #done
+{
+	margin:0px;
+}
+footer #edit
+{
+	margin-left:5%;
+	float:right;
+	margin-top:-20px;
+}
+#back
+{
+	background-color:white;
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/back.png');
+}
+#save
+{
+	float: right;
+	background-color:white;
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/save.png');
 }
