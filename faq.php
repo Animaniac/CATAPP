@@ -9,9 +9,8 @@
 	</head>
 	<body>
 		<div id="banner"></div>
-		<div id="logo">
-			<img src="images/logo.png">
-		</div>
+			<img id="cat" src="images/logo.png">
+			<img id="nhs" src="images/nhs.png">
 		<article class="main">
 			<img src="images/bleft.png" id="lbub">
 			<img src="images/bright.png" id="rbub">

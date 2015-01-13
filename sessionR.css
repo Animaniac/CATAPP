@@ -68,30 +68,50 @@ nav img
 	height:18%;
 	width:18%;
 }
-.content
+h2
 {
-	padding:0px;
-	margin:0px;
-	margin-left:3%;
-	margin-top:3%;
-	height:17%;
+	margin-left:34%;
 	color:#372a73;
 }
-#s
+textarea
+{
+	margin-left:5%;
+    resize: none;
+	width:88%;
+	height:140px;
+}
+footer
+{
+	width:90%;
+	margin-left:5%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+footer #delete
 {
 	float:left;
-	height:90%;
-	width:30%;
-	color:blue;
+	margin-right:5%;
+	margin-bottom:5px;
 }
-#m
+footer #done
 {
-	margin-top:2%;
-	float:left;
-	height:90%;
-	width:60%;
+margin:0px;
 }
-#l
+footer #edit
 {
-	width:94%;
+	margin-left:5%;
+	float:right;
+}
+#delete
+{
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/delete.png');
 }

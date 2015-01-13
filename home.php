@@ -9,12 +9,40 @@
 	</head>
 	<body>
 		<div id="banner"></div>
-		<div id="logo">
-			<img src="images/logo.png">
-		</div>
+			<img id="cat" src="images/logo.png">
+			<img id="nhs" src="images/nhs.png">
 		<article class="main">
-	
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Target Problem Procedure</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Mood Map</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Doctors Letters</h3></div>
+			</div></a>
+			<a href="sessionM.php"><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Sessions</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Progress</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/icon.gif"></div>
+			<div class="content" id="m"><h3>Alarms</h3></div>
+			</div></a>
 		</article>
-		<nav><img src="images/icon.gif"><img src="images/icon.gif"><img src="images/icon.gif"><img src="images/icon.gif"><img src="images/icon.gif"></nav>
+		<nav>
+			<a href="home.php"><img src="images/home.png"></a>
+			<a href="notes.php"><img src="images/note.png"></a>
+			<a href="alarm.php"><img src="images/clock.png"></a>
+			<a href="settings.php"><img src="images/settings.png"></a>
+			<a href="exit.js"><img src="images/exit.png"></a>
+		</nav>
 	</body>
 </html>

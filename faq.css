@@ -21,22 +21,34 @@ body{
 	height:25px;
 	margin-top:0px;
 }
-#logo{
+#cat{
+	float:left;
 	z-index:200;
-	width:6%;
+	width:40%;
 	margin-left:5%;
 	margin-top: -20px;
+	margin-bottom:10px;
+}
+#nhs{
+	z-index:200;
+	height:25px;
+	float:right;
+	margin-top: -25px;
+	margin-right:5%;
 }
 .main
 {
+	background-color:white;
 	margin:5%;
 	margin-bottom:2%;
 	width:90%;
-	height:340px;
-	background-color:white;
+	height:325px;
+	background-color:;
 	border:solid 1px black;
+	overflow:hidden;
 	overflow:scroll;
-	overflow-x: hidden;
+	overflow-x:hidden;
+	border-radius:5px;
 }
 #lbub
 {
