@@ -10,7 +10,7 @@
 	<body>
 		<div id="banner"></div>
 		<div id="logo">
-			<img src="images/logo.png">
+			<a href="index.html"><img src="images/logo.png"><a/>
 		</div>
 		<?php
 				session_start();

@@ -25,8 +25,11 @@
 			<img src="images/bleft.png" id="lbub">
 			<img src="images/bright.png" id="rbub">		
 		</article>
-		<input type="submit" name="submit" id="tc1" value="Terms &#38; Conditoins 1" class="buttonStyle"><input type="submit" name="submit" id="tc2" value="Terms &#38; Conditoins 2" class="buttonStyle">
-		<div id="footer"><a href="index.html"><input type="submit" name="submit" id="Decline" value="Decline" class="buttonStyle"></a>
-			<a href="home.php"><input type="submit" name="submit" id="Accept" value="Accept" class="buttonStyle"></a></div>
+		<footer>
+		<input type="submit" name="submit" id="tc1" value="Terms &#38; Conditoins 1" class="buttonStyle">
+		<input type="submit" name="submit" id="tc2" value="Terms &#38; Conditoins 2" class="buttonStyle">
+		</br></br><a href="index.html"><input type="submit" name="submit" id="Decline" value="Decline" class="buttonStyle"></a>
+			<a href="home.php"><input type="submit" name="submit" id="Accept" value="Accept" class="buttonStyle"></a>
+		</footer>
 	</body>
 </html>
