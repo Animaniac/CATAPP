@@ -19,23 +19,10 @@
 # under the License.
 #
 -->
-<widget>
-    <access origin='*'/>
-</widget>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
-
-    <name>Hello World</name>
-
-    <description>
-        Hello World sample application that responds to the deviceready event.
-    </description>
-
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        johnny
-    </author>
     <preference name="phonegap-version" value="3.6.3" />
    <preference name="orientation" value="portrait" /> 
 
