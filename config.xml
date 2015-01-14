@@ -25,5 +25,5 @@
         version   = "1.0.0">
     <preference name="phonegap-version" value="3.6.3" />
    <preference name="orientation" value="portrait" /> 
-
+<icon src="images/app.png" />
 </widget>
