@@ -26,6 +26,6 @@
 			<img src="images/bright.png" id="rbub">		
 		</article>
 		<input type="submit" name="submit" id="tc1" value="Terms &#38; Conditoins 1" class="buttonStyle"><input type="submit" name="submit" id="tc2" value="Terms &#38; Conditoins 2" class="buttonStyle">
-		<div id="footer"><input type="submit" name="submit" id="Decline" value="Decline" class="buttonStyle"><input type="submit" name="submit" id="Accept" value="Accept" class="buttonStyle"></div>
+		<div id="footer"><a href="index.html"><input type="submit" name="submit" id="Decline" value="Decline" class="buttonStyle"></a><a href="welcome.php"><input type="submit" name="submit" id="Accept" value="Accept" class="buttonStyle"></a></div>
 	</body>
 </html>
