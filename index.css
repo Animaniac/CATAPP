@@ -1,5 +1,38 @@
 html{
 	font-family: 'Quicksand', sans-serif;
+	background-image: url("images/pcBg.jpg");
+	background-repeat: no-repeat;
+	background-size:100%,100%;
+}
+#banner{
+	z-index:100;
+	left:0px;
+	padding:0px;
+	margin:0px;
+	background-color:#007ac3;
+	width:auto;
+	height:25px;
+	margin-top:5%;
+}
+#login{
+	position:absolute;
+	z-index:0;
+	height:auto;
+	width:100%;
+	height:auto;
+	margin-top:15%;
+}
+
+/*moblie*/
+@media only screen 
+and (max-device-height : 650px)
+and (max-device-width : 400px) 
+only screen and (-webkit-min-device-pixel-ratio : 1),
+only screen and (min-device-pixel-ratio : 1){
+/* Styles */
+html
+{
+	font-family: 'Quicksand', sans-serif;
 	background-image: url("bg6.jpg");
 	background-repeat: no-repeat;
 	background-size:400px,650px;
@@ -65,4 +98,4 @@ header #nhs{
 {
 	position:absolute;
 	display:hidden;
-}
+}}
