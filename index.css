@@ -1,6 +1,6 @@
 html{
 	font-family: 'Quicksand', sans-serif;
-	background-image: '../images/bg6.jpg';
+	background-image: url("../images/bg6.jpg");
 	background-repeat: no-repeat;
 	background-size:568px,100%;
 }
