@@ -44,7 +44,7 @@
 			<a href="sessionm.php"><img src="note.png"></a>
 			<a href="alarm.php"><img src="clock.png"></a>
 			<a href="settings.php"><img src="settings.png"></a>
-			<a href="exit.js"><img src="exit.png"></a>
+			<a href="exit.js"><img src="../www/images/exit.png"></a>
 		</nav>
 	</body>
 </html>
