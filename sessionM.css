@@ -1,12 +1,11 @@
 html
 {
-	font-family: sans-serif;
-}
-
-body{
-	background-image: url('images/Leafs.jpg');
+	font-family: 'Quicksand', sans-serif;
+	background-image: url('images/bg6.jpg');
 	background-repeat: no-repeat;
-
+	background-size:568px,100%;
+}
+body{
 	height:auto;
 	padding:0px;
 	margin:0px;

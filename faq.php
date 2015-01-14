@@ -2,10 +2,10 @@
 <html>
 	<title>&nbsp;</title>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<?php
+			require_once"headder.inc.php";
+		?>
 		<link rel="stylesheet" href="faq.css" />
-		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
 	</head>
 	<body>
 		<div id="banner"></div>
