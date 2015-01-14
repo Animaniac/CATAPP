@@ -2,9 +2,10 @@
 <html>
 	<title>&nbsp;</title>
 	<head>
-		<?php
-			require_once"headder.inc.php";
-		?>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
+		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
 		<link rel="stylesheet" href="home.css"/>
 	</head>
 	<body>
@@ -38,8 +39,12 @@
 			<div class="content" id="m"><h3>Alarms</h3></div>
 			</div></a>
 		</article>
-		<?php
-			require_once"nav.inc.php";
-		?>
+		<nav>
+			<a href="home.php"><img src="images/home.png"></a>
+			<a href="sessionm.php"><img src="images/note.png"></a>
+			<a href="alarm.php"><img src="images/clock.png"></a>
+			<a href="settings.php"><img src="images/settings.png"></a>
+			<a href="exit.js"><img src="images/exit.png"></a>
+		</nav>
 	</body>
 </html>
