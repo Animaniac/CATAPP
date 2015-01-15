@@ -1,7 +1,7 @@
 html
 {
 	font-family: 'Quicksand', sans-serif;
-	background-image: url('images/bg6.jpg');
+	background-image: url('images/Bg6.jpg');
 	background-repeat: no-repeat;
 	background-size:568px,100%;
 }
@@ -39,15 +39,13 @@ body{
 {
 	position:absolute;
 	z-index:0;
-	background-color:white;
+	background-color:rgba(255,255,255,0.8);
 	margin:5%;
 	margin-bottom:2%;
 	margin-top:10%;
 	width:90%;
 	height:74%;
 	background-color:;
-	border:solid 1px black;
-	overflow:hidden;
 	overflow:scroll;
 	overflow-x:hidden;
 	border-radius:5px;
@@ -64,38 +62,49 @@ nav img
 {
 	padding:0px;
 	margin:0px;
-	height:18%;
-	width:18%;
-}
-.content
-{
-	padding:0px;
-	margin:0px;
+	height:15%;
+	width:15%;
 	margin-left:3%;
-	margin-top:3%;
-	height:17%;
-	color:#372a73;
-}
-#s
-{
-	float:left;
-	height:90%;
-	width:30%;
-	color:blue;
-}
-#m
-{
-	margin-top:2%;
-	float:left;
-	height:90%;
-	width:60%;
-}
-#l
-{
-	width:94%;
+	margin-top:1%;
 }
 h2
 {
 	margin-left:34%;
 	color:#372a73;
+}
+.formContainer
+{
+	display:inline-block;
+	width:85%;
+	margin-left:5%;
+}
+.formContainer input
+{
+	width:100%;
+}
+.buttonStyle
+{
+	text-decoration:none;
+	border:0px;
+	font-weight:900;
+	color:white;
+	border-radius:0px 0px 5px 5px;
+	padding:3px;
+	margin:0px;
+	margin-left:0%;
+	margin-bottom:4px;
+	background: repeating-linear-gradient(45deg,
+	rgba(55, 42, 115, 1),
+	rgba(55, 42, 115, 1) 10px,
+	rgba(55, 42, 115, 0.8) 10px,
+	rgba(55, 42, 115, 0.8) 20px);
+}
+#submit
+{
+	width:30%;
+	float:right;
+}
+form
+{
+	margin-bottom:50px;
 }

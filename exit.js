@@ -1,6 +1,11 @@
-<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
-function exit()
-{
-	navigator.app.exitApp();
-}
+<!DOCTYPE html>
+<html>
+<body>
+<script language="javascript" type="text/javascript"> 
+function windowClose() { 
+window.open('','_parent',''); 
+window.close();
+} 
 </script>
+</body>
+</html>

@@ -1,3 +1,9 @@
 <?php
-echo('<nav><a href="home.php"><img src="images/home.png"></a><a href="sessionm.php"><img src="images/note.png"></a><a href="alarm.php"><img src="images/clock.png"></a><a href="settings.php"><img src="images/settings.png"></a><a href="exit.js"><img src="images/exit.png"></a></nav>');
+echo('<nav>
+			<a href="home.php"><div id="home"><img src="images/homeNav"></div></a>
+			<a href="sessionm.php"><div id="home"><img src="images/noteNav.png"></div></a>
+			<a href="alarm.php"><div id="home"><img src="images/clockNav.png"></div></a>
+			<a href="settings.php"><div id="home"><img src="images/settingsNav.png"></div></a>
+			<a href="exit.js"><div id="home"><img src="images/exitNav"></div></a>
+		</nav>');
 ?>

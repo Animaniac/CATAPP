@@ -4,6 +4,13 @@ html{
 	background-repeat: no-repeat;
 	background-size:100%,100%;
 }
+body{
+	width:100%;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	overflow:auto;
+}
 #banner{
 	z-index:100;
 	left:0px;
@@ -22,10 +29,41 @@ html{
 	height:auto;
 	margin-top:15%;
 }
+#logo{
+	z-index:200;
+	width:6%;
+	margin-left:40%;
+	margin-top: -35px;
+}
+header{
+	position:relative;
+	padding:0px;
+	margin:0px;
+	margin-left:35%;
+	width:30%;
+	height:auto;
+}
+header #faq{
+	float:left;
+}
+header #nhs{
+	float:right;
+}
+#face
+{
+	width:auto;
+	margin-left:20%;
+	bottom:0px;
+}
+#logreg
+{
+	width:auto;
+	margin-left:28%;
+}
 
 /*moblie*/
 @media only screen 
-and (max-device-height : 650px)
+and (max-device-height : 740px),
 and (max-device-width : 400px) 
 only screen and (-webkit-min-device-pixel-ratio : 1),
 only screen and (min-device-pixel-ratio : 1){
@@ -35,7 +73,7 @@ html
 	font-family: 'Quicksand', sans-serif;
 	background-image: url("bg6.jpg");
 	background-repeat: no-repeat;
-	background-size:400px,650px;
+	background-size:450px,740px;
 }
 body{
 	width:100%;
