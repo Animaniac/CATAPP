@@ -1,72 +1,5 @@
-html
-{
-	font-family: 'Quicksand', sans-serif;
-	background-image: url('images/bg6.jpg');
-	background-repeat: no-repeat;
-	background-size:568px,100%;
-}
-body{
-	height:auto;
-	padding:0px;
-	margin:0px;
-}
-#banner{
-	z-index:100;
-	left:0px;
-	padding:0px;
-	margin:0px;
-	background-color:#007ac3;
-	width:auto;
-	height:25px;
-	margin-top:0px;
-}
-#cat{
-	float:left;
-	z-index:200;
-	width:40%;
-	margin-left:5%;
-	margin-top: -20px;
-	margin-bottom:10px;
-}
-#nhs{
-	z-index:200;
-	height:25px;
-	float:right;
-	margin-top: -25px;
-	margin-right:5%;
-}
-.main
-{
-	position:absolute;
-	z-index:0;
-	background-color:rgba(255,255,255,0.8);
-	margin:5%;
-	margin-bottom:2%;
-	margin-top:10%;
-	width:90%;
-	height:74%;
-	background-color:;
-	overflow:scroll;
-	overflow-x:hidden;
-	border-radius:5px;
-}
-nav
-{
-	position:absolute;
-	height:auto;
-	width:100%;
-	background-color:white;
-	bottom:0px;
-}
-nav img
-{
-	padding:0px;
-	margin:0px;
-	height:15%;
-	width:15%;
-	margin-left:3%;
-	margin-top:1%;
-}
+
+
 .content
 {
 	padding:0px;
@@ -110,21 +43,6 @@ nav img
 	width:94%;
 	margin-left:6%;
 }
-h2
-{
-	margin-left:25%;
-	color:#372a73;
-}
-footer
-{
-	border: 0px;
-	border-top:solid 1px black;
-	width:90%;
-	margin-top:10px;
-	margin-left: 5%;
-	padding-top:10px;
-	padding-bottom:10px;
-}
 #s img
 {
 	width:32px;
@@ -147,24 +65,20 @@ form
 {
 	width:100%;
 }
-footer #back
+footer
 {
-	float:left;
-	margin-right:5%;
-	margin-bottom:5px;
-}
-footer #done
-{
-	margin:0px;
-}
-footer #edit
-{
-	margin-left:5%;
-	float:right;
-	margin-top:-20px;
+	border: 0px;
+	border-top:solid 1px black;
+	width:90%;
+	margin-left: 5%;
+	margin-top:35%;
+	padding-top:10px;
+	padding-bottom:50px;
+	bottom:0px;
 }
 #back
 {
+	float:left;
 	background-color:white;
 	height:33px;
 	width:34px;
@@ -173,13 +87,13 @@ footer #edit
 	text-decoration: none;
 	cursor: pointer;
 	border: none;
-	border-radius: 6px;
+	border-radius: 90px;
 	color: transparent;
 	background-image: url('images/back.png');
 }
 #save
 {
-	float: right;
+	float:right;
 	background-color:white;
 	height:33px;
 	width:34px;
@@ -188,7 +102,7 @@ footer #edit
 	text-decoration: none;
 	cursor: pointer;
 	border: none;
-	border-radius: 6px;
+	border-radius: 90px;
 	color: transparent;
 	background-image: url('images/save.png');
 }

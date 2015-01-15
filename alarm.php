@@ -44,11 +44,11 @@
 			<div class="content" id="l">
 			<div class="content" id="s"><lable for="vibe">Sound:</lable></div>
 			<div class="content" id="m"><select id="sound">
-					<option value="Deafult">Deafult</option>
-					<option value="rumba">rumba</option>
+					<option value="Deafult">Default</option>
+					<option value="rumba">Rumba</option>
 					<option value="Sweat Child of Mine">Sweat Child of Mine</option>
-					<option value="batman">batman</option>
-					<option value="the who">the who</option>
+					<option value="batman">Batman</option>
+					<option value="the who">The who</option>
 				</select>
 			</div>
 			</div>
@@ -65,8 +65,8 @@
 			</div>
 			</div>
 			<div class="content" id="l">
-			<div class="content" id="s"><lable for="snooz">Snooz:</lable></div>
-			<div class="content" id="m"><input type="checkbox" name="snooz" id="snooz" required>
+			<div class="content" id="s"><lable for="snooze">Snooze:</lable></div>
+			<div class="content" id="m"><input type="checkbox" name="snooze" id="snooz" required>
 			</div>
 			</div>
 			</form>

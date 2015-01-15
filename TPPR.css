@@ -1,3 +1,10 @@
+textarea
+{
+	margin-left:5%;
+    resize: none;
+	width:88%;
+	height:70%;
+}
 footer
 {
 	width:90%;
@@ -15,11 +22,10 @@ footer #done
 {
 margin:0px;
 }
-footer #save
+footer #edit
 {
 	margin-left:5%;
 	float:right;
-	margin-top:-20px;
 }
 #back
 {
@@ -35,7 +41,7 @@ footer #save
 	color: transparent;
 	background-image: url('images/back.png');
 }
-#save
+#edit
 {
 	background-color:white;
 	height:33px;
@@ -47,5 +53,6 @@ footer #save
 	border: none;
 	border-radius: 6px;
 	color: transparent;
-	background-image: url('images/save.png');
+	background-image: url('images/edit.png');
+	margin-top:0px;
 }

@@ -136,4 +136,20 @@ header #nhs{
 {
 	position:absolute;
 	display:hidden;
-}}
+}
+social
+{
+	width:128px;
+	margin-left:29%;
+	background-color:#372a73;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.socialBtn
+{
+	margin:0px;
+	padding:0px;
+	width:32px;
+	height:32px;
+}
+}

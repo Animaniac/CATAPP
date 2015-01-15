@@ -2,10 +2,9 @@
 <html>
 	<title>&nbsp;</title>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
-		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
+		<?php
+			require_once"headder.inc.php";
+		?>
 		<link rel="stylesheet" href="home.css"/>
 	</head>
 	<body>
@@ -14,9 +13,13 @@
 			<img id="nhs" src="images/nhs.png">
 		<article class="main">
 			<u><h2>Main Menu</h2></u>
-			<a href=""><div class="content" id="l">
+			<a href="TPPM.php"><div class="content" id="l">
 			<div class="content" id="s"><img src="images/TPP.png"></div>
 			<div class="content" id="m"><h3>Target Problem Procedure</h3></div>
+			</div></a>
+			<a href=""><div class="content" id="l">
+			<div class="content" id="s"><img src="images/Map.png"></div>
+			<div class="content" id="m"><h3>Mood Map</h3></div>
 			</div></a>
 			<a href="MoodM.php"><div class="content" id="l">
 			<div class="content" id="s"><img src="images/moodManager.png"></div>
