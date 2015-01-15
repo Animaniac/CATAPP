@@ -139,28 +139,15 @@
 				<article class="main" id="reg">
 				<script type="text/javascript">
 
-				var counter = 0;
 				$(document).ready(function(){
-				$('.buttonStyle').click(function (){
-					if (counter == 0) {
-						$('#fromLogin').fadeOut();
-						$('#reg').delay(385).fadeIn();
-						$('#toggleBtn').text('Login');
-						counter++;}
+				$('#toggleBtn').click(function (){
+					$('#log').fadeOut();
+					$('#toggleBtn').fadeOut();
+					$('#reg').delay(385).fadeIn();
+					$('#toggleBtn2').delay(385).fadeIn();
 
-    				else if (counter == 1){
-			    	$('#reg').fadeOut();
-					$('#fromLogin').delay(385).fadeIn();
-					$('#toggleBtn').text('Register');
-					counter--;}
-    				});  
-	
+    				});
 				});  
-
-
-						
-				</script>
-				<script>
 				function regVal(){
 				    var email = document.forms["registercatch"]["email"].value;
 				    var emailR = document.forms["registercatch"]["emailR"].value;
@@ -366,6 +353,19 @@
 						}}
 						
 				?></p>
+				
 		</article>
+		<div id="changeForm">
+			<button id="toggleBtn2" class="buttonStyle">login</button>
+		</div>
+				<script type="text/javascript">
+
+				$('#toggleBtn2').click(function (){
+					$('#reg').fadeOut();
+					$('#toggleBtn2').fadeOut();
+					$('#log').delay(385).fadeIn();
+					$('#toggleBtn').delay(385).fadeIn();
+				});
+					</script>
 	</body>
 </html>

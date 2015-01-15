@@ -4,7 +4,7 @@ html
 }
 
 body{
-	background-image: url('images/Leafs.jpg');
+	background-image: url('images/bg6.jpg');
 	background-repeat: no-repeat;
 	background-size: 200% 200%;
 	height:auto;
@@ -40,7 +40,7 @@ body{
 }
 
 h3{
-	margin-top:5px;
+	margin-top:0px;
 	margin-bottom:5px;
 	padding-left:35%;
 	color:#372a73;
@@ -99,7 +99,7 @@ h3{
 	float:right;
 	padding-top:1px;
 }
-#toggleBtn
+#toggleBtn, #toggleBtn2
 {
 	margin:0px;
 	margin-left:5%;
@@ -112,6 +112,8 @@ h3{
 	rgba(55, 42, 115, 0.8) 10px,
 	rgba(55, 42, 115, 0.8) 20px);
 }
+#toggleBtn2
+{display: none;}
 #reg 
 {
 	display:none;
