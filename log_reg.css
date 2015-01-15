@@ -1,11 +1,12 @@
 html
 {
-	font-family: 'Quicksand', sans-serif;
-	background-image: url('images/bg6.jpg');
-	background-repeat: no-repeat;
-	background-size:568px,100%;
+	font-family: sans-serif;
 }
+
 body{
+	background-image: url('images/Leafs.jpg');
+	background-repeat: no-repeat;
+	background-size: 200% 200%;
 	height:auto;
 	padding:0px;
 	margin:0px;
@@ -111,10 +112,14 @@ h3{
 	rgba(55, 42, 115, 0.8) 10px,
 	rgba(55, 42, 115, 0.8) 20px);
 }
-#reg
+#reg 
 {
 	display:none;
 }
 #log
 {
+}
+
+#myForm{
+
 }

@@ -5,12 +5,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="log_reg.css" />
-		<script type="text/javascript" charset="utf-8" src="cordova/cordova.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+		
 	</head>
 	<body>
 		<div id="banner"></div>
 		<div id="logo">
-			<a href="index.html"><img src="images/logo.png"><a/>
+			<img src="images/logo.png">
 		</div>
 		<?php
 				session_start();
@@ -44,7 +48,7 @@
 				        return false;
 				    }};
 				</script>
-				<form name="logincheck" method="post" action="LoginCatch.php" onsubmit="return logVal()" class="loginPage">
+				<form id="fromLogin" name="logincheck" method="post" action="LoginCatch.php" onsubmit="return logVal()" class="loginPage">
 					<h3><u>Login</u></h3>
 					<label for="user">Username:</label>
 					<input type="text" name="user" id="user" autofocus required>
@@ -129,10 +133,33 @@
 						}
 					}
 				?></p></article>
-				<div id="toggle">
-					<input type="button" name="register" id="toggleBtn" value="register" class="buttonStyle">
+				<div id="changeForm">
+					<button id="toggleBtn" class="buttonStyle">Register</button>
 				</div>
 				<article class="main" id="reg">
+				<script type="text/javascript">
+
+				var counter = 0;
+				$(document).ready(function(){
+				$('.buttonStyle').click(function (){
+					if (counter == 0) {
+						$('#fromLogin').fadeOut();
+						$('#reg').delay(385).fadeIn();
+						$('#toggleBtn').text('Login');
+						counter++;}
+
+    				else if (counter == 1){
+			    	$('#reg').fadeOut();
+					$('#fromLogin').delay(385).fadeIn();
+					$('#toggleBtn').text('Register');
+					counter--;}
+    				});  
+	
+				});  
+
+
+						
+				</script>
 				<script>
 				function regVal(){
 				    var email = document.forms["registercatch"]["email"].value;
@@ -140,7 +167,6 @@
 				    var regUser = document.forms["registercatch"]["regUser"].value;
 				    var regPass = document.forms["registercatch"]["regPass"].value;
 				    var confRegPass = document.forms["registercatch"]["confRegPass"].value;
-				    var dob = document.forms["registercatch"]["dob"].value;
 				    var count = 0;
 				    var errormMsg = "";
 				    if(email == null || email == "")
