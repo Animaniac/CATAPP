@@ -6,6 +6,22 @@
 	float:right;
 }
 
+html{
+	font-family: 'Quicksand', sans-serif;
+	background-image: url("bg6.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+
+body{
+	width:100%;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	overflow:auto;
+
+}
+
 footer{
 	position:fixed;
 	bottom:0px;
@@ -51,7 +67,7 @@ input{
 	text-indent: 15px;
 	margin: auto;
 	margin-top: 40px;
-	background-color: #F2F1ED; 
+	background-color: white; 
     border-radius: 6px; 
 }
 
@@ -59,7 +75,7 @@ input{
 	width: 75%;
 	text-indent: 15px;	
 	margin: auto;	
-	background-color: #F2F1ED; 
+	background-color: white; 
     border-radius: 6px; 
 }
 
@@ -70,7 +86,7 @@ input{
 	margin: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #F2F1ED; 
+	background-color: white; 
     border-radius: 6px; 
 }
 
