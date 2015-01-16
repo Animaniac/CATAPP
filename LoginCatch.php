@@ -90,19 +90,23 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 		{
 			$_SESSION['mod']=false;
 			$_SESSION['admin']=false;
-			//header ("Location: home.php");
+			echo("user");
+			header ("Location: home.php");
 		}
 		else if ($accountl == 1)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=false;
-			//header ("Location: home.php");
+			header ("Location: home.php");
+			echo("doc");
 		}
 		else if ($accountl == 2)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=true;
-			//header ("Location: home.php");
+			// header ("Location: home.php");
+			json_encode("home.php");
+			echo("admin");
 		}
 		else
 		{
