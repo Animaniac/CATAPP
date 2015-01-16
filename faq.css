@@ -50,9 +50,7 @@ input{
 	width:auto;
 }
 
-#banner{
-	padding-top: 12px;
-}
+
 
 .hide {
   display: none;
@@ -69,6 +67,8 @@ input{
 	margin-top: 40px;
 	background-color: white; 
     border-radius: 6px; 
+    text-align: center;
+    tex
 }
 
 .questionBottom{
@@ -76,7 +76,8 @@ input{
 	text-indent: 15px;	
 	margin: auto;	
 	background-color: white; 
-    border-radius: 6px; 
+    border-radius: 6px;
+    text-align: center; 
 }
 
 
@@ -88,6 +89,7 @@ input{
 	margin-bottom: 10px;
 	background-color: white;
 	border-radius: 6px; 
+	text-align: center;
 
 }
 

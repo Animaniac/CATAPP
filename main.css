@@ -18,7 +18,7 @@ body{
 	background-color:#007ac3;
 	width:auto;
 	height:25px;
-	margin-top:0px;
+	margin-top:12px;
 }
 #cat{
 	position:absolute;
@@ -31,7 +31,7 @@ body{
 	z-index:200;
 	height:25px;
 	float:right;
-	margin-top: -25px;
+	margin-top: 0px;
 	margin-right:5%;
 }
 .main
