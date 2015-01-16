@@ -1,4 +1,4 @@
-html{
+/*html{
 	font-family: 'Quicksand', sans-serif;
 	background-image: url("images/pcBg.jpg");
 	background-repeat: no-repeat;
@@ -68,7 +68,7 @@ and (max-device-height : 740px),
 and (max-device-width : 400px) 
 only screen and (-webkit-min-device-pixel-ratio : 1),
 only screen and (min-device-pixel-ratio : 1){
-/* Styles */
+/* Styles */*/
 html
 {
 	font-family: 'Quicksand', sans-serif;
