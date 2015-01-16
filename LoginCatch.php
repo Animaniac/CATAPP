@@ -1,6 +1,6 @@
 <?php
 session_start();
-//take all the inputted data from the log in page and place into variables and session variables for later  use
+// //take all the inputted data from the log in page and place into variables and session variables for later  use
 	$form_user = trim(filter_input(INPUT_POST,user, FILTER_SANITIZE_STRING)," \t\n\r\0\x0B");
 	$form_pass = trim(filter_input(INPUT_POST,pass, FILTER_SANITIZE_STRING)," \t\n\r\0\x0B");
 	$errorCount = 0;
@@ -90,19 +90,19 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 		{
 			$_SESSION['mod']=false;
 			$_SESSION['admin']=false;
-			header ("Location: index.php");
+			header ("Location: home.php");
 		}
 		else if ($accountl == 1)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=false;
-			header ("Location: index.php");
+			header ("Location: home.php");
 		}
 		else if ($accountl == 2)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=true;
-			header ("Location: index.php");
+			header ("Location: home.php");
 		}
 		else
 		{

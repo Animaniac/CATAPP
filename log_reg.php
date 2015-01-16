@@ -1,3 +1,9 @@
+<?php session_start();
+		if (isset($_SESSION['login']))
+			{if ($_SESSION['login'] == true)
+				{header("Location: index.php");
+		}}
+		?>
 <!DOCTYPE html>
 <html>
 	<title>&nbsp;</title>
@@ -8,21 +14,13 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
-		
 	</head>
 	<body>
 		<div id="banner"></div>
 		<div id="logo">
 			<img src="images/logo.png">
 		</div>
-		<?php
-				session_start();
-		if (isset($_SESSION['login']))
-			{if ($_SESSION['login'] == true)
-				{header("Location: index.php");
-		}}
-		?>
+		
 		<div id="buffer"></div>
 		<article class="main" id="log">
 				<script>
@@ -48,7 +46,7 @@
 				        return false;
 				    }};
 				</script>
-				<form id="fromLogin" name="logincheck" method="post" action="LoginCatch.php" onsubmit="return logVal()" class="loginPage">
+				<form id="fromLogin" name="logincheck" method="post" action="LoginCatch.php"  class="loginPage"  data-ajax="false">
 					<h3><u>Login</u></h3>
 					<label for="user">Username:</label>
 					<input type="text" name="user" id="user" autofocus required>

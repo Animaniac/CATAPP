@@ -18,7 +18,7 @@
 			<div class="content" id="m"><h3>Target Problem Procedure</h3></div>
 			</div></a>
 			<a href=""><div class="content" id="l">
-			<div class="content" id="s"><img src="images/Map.png"></div>
+			<div class="content" id="s"><img src="images/map.png"></div>
 			<div class="content" id="m"><h3>Mood Map</h3></div>
 			</div></a>
 			<a href="MoodM.php"><div class="content" id="l">
@@ -47,11 +47,11 @@
 			</div></a>
 		</article>
 		<nav>
-			<a href="home.php"><div id="home"><img src="images/homeNav"></div></a>
-			<a href="sessionm.php"><div id="home"><img src="images/noteNav.png"></div></a>
+			<a href="home.php"><div id="home"><img src="images/homeNav.png"></div></a>
+			<a href="sessionM.php"><div id="home"><img src="images/noteNav.png"></div></a>
 			<a href="alarm.php"><div id="home"><img src="images/clockNav.png"></div></a>
 			<a href="settings.php"><div id="home"><img src="images/settingsNav.png"></div></a>
-			<a href="exit.js"><div id="home"><img src="images/exitNav"></div></a>
+			<a href="exit.js"><div id="home"><img src="images/exitNav.png"></div></a>
 		</nav>
 	</body>
 </html>
