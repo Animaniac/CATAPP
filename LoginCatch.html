@@ -28,11 +28,7 @@ if($errorCount > 0)
 	$_SESSION['wrongp']=false;
 	$_SESSION['wrongu']=false;
 	$_SESSION['login']=false;
-<<<<<<< HEAD
 	header ("Location: log_reg.html");
-=======
-	header ("Location: log_reg.php");
->>>>>>> origin/master
 }
 else{
 include"connect.inc.php";
@@ -79,11 +75,7 @@ if($errorCount > 0)
 	$dbcon->close();
 	echo ($pass."</br>");
 	echo (crypt($form_pass, $pass));
-<<<<<<< HEAD
 	header ("Location: log_reg.html");
-=======
-	header ("Location: log_reg.php");
->>>>>>> origin/master
 }
 else
 {
@@ -98,31 +90,19 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 		{
 			$_SESSION['mod']=false;
 			$_SESSION['admin']=false;
-<<<<<<< HEAD
 			header ("Location: home.html");
-=======
-			header ("Location: home.php");
->>>>>>> origin/master
 		}
 		else if ($accountl == 1)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=false;
-<<<<<<< HEAD
 			header ("Location: home.html");
-=======
-			header ("Location: home.php");
->>>>>>> origin/master
 		}
 		else if ($accountl == 2)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=true;
-<<<<<<< HEAD
 			header ("Location: home.html");
-=======
-			header ("Location: home.php");
->>>>>>> origin/master
 		}
 		else
 		{
@@ -135,11 +115,7 @@ else
 	{
 		//if the username or passswords dont equal the ones on the table kick them out and set a varibale to tell them later.
 		$_SESSION['login']=false;
-<<<<<<< HEAD
 		header ("Location: log_reg.html");
-=======
-		header ("Location: log_reg.php");
->>>>>>> origin/master
 		mysqli_close($dbcon);
 	}
 	$stmt->close();

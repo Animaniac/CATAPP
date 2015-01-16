@@ -104,11 +104,7 @@ if($errorCount > 0)
 	//echo ($_SESSION['regTaken']? 'true' : 'false');
 	//echo ($_SESSION['emailTaken']? 'true' : 'false');
 	mysqli_close($dbcon);
-<<<<<<< HEAD
 	header ("Location: log_reg.html");
-=======
-	header ("Location: log_reg.php");
->>>>>>> origin/master
 }
 else
 {
@@ -125,28 +121,16 @@ if ($stmt = $dbcon->prepare("INSERT INTO Users(ID,email,username,password,accoun
 	//echo "user added";
 		$_SESSION['regUser'] = $regUser;
 	$subject = 'Do not reply - Gravity Lan account confirmation';
-<<<<<<< HEAD
 	$message = 'Welcome to Gravity Lan, to confirm your account please input:'."\r\n".$confirmation."\r\n".'on this page: http://homepages.shu.ac.uk/~b3006705/CATApp/confirm.html';
 	$headers = 'From: GravityLan@gmail.com';
 	mail($email, $subject, $message, $headers);
 	$_SESSION['login']=false;
 	header ("Location: confirm.html");
-=======
-	$message = 'Welcome to Gravity Lan, to confirm your account please input:'."\r\n".$confirmation."\r\n".'on this page: http://homepages.shu.ac.uk/~b3006705/CATApp/confirm.php';
-	$headers = 'From: GravityLan@gmail.com';
-	mail($email, $subject, $message, $headers);
-	$_SESSION['login']=false;
-	header ("Location: confirm.php");
->>>>>>> origin/master
 }	
 else 
 {
 	//echo("user not added");
-<<<<<<< HEAD
 	header ("Location: log_reg.html");
-=======
-	header ("Location: log_reg.php");
->>>>>>> origin/master
 }}
 $stmt->close();
 $dbcon->close();}
