@@ -49,7 +49,8 @@
 					<input type="password" name="pass" id="pass" required>
 				</br>
 					<a href='Forgoten.html'>Forgot password?</a>
-					<input type="submit" name="submit" id="login" value="Login" class="buttonStyle">
+				</br>
+					<input type="submit" name="submit" id="login" value="Login" class="buttonStyle" >
 				</form>
 				<p id="LogValText">
 				</p></article>
@@ -66,14 +67,28 @@
 					// form["username"] = $('form')
 					// JSON.stringify($('form').serializeArray());
 					// alert(JSON.stringify($('form').serializeArray()));
-						$.ajax({
-						  type: 'post',
-						  url: "LoginCatch.php",
-						  dataType : 'json',
-						  data: form,
-						  context: document.body
-						}).done
-						success: window.location = 'home.html'
+						// $.ajax({
+						//   type: 'post',
+						//   url: "LoginCatch.php",
+						//   dataType : 'json',
+						//   data: form,
+						//   context: document.body
+						// }).done
+
+						$.post('LoginCatch.php', form, function(myData){
+								if(myData.success >= 2)
+								{
+									success: window.location = 'home.html';
+								}
+								else
+								{
+									success: window.location = 'log_reg.html';
+								}
+								//console.info(myData.success)
+
+						}, 'json');
+
+						// success: window.location = 'home.html'
 						});
 			});
 

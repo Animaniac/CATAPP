@@ -90,29 +90,38 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 		{
 			$_SESSION['mod']=false;
 			$_SESSION['admin']=false;
-			echo("user");
-			header ("Location: home.php");
+			//header ("Location: home.php");
+			$myArray = array('success'=>0);
+			$myReturnJson = json_encode($myArray);
+			echo $myReturnJson;		
 		}
 		else if ($accountl == 1)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=false;
-			header ("Location: home.php");
-			echo("doc");
+			//header ("Location: home.php");
+			$myArray = array('success'=>1);
+			$myReturnJson = json_encode($myArray);
+			echo $myReturnJson;		
 		}
 		else if ($accountl == 2)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=true;
 			// header ("Location: home.php");
-			json_encode("home.php");
-			echo("admin");
+			//json_encode("home.php");
+			$myArray = array('success'=>2);
+			$myReturnJson = json_encode($myArray);
+			echo $myReturnJson;		
 		}
 		else
 		{
 			$_SESSION['login']=false;
 			$_SESSION['admin']=false;
 			$_SESSION['mod']=false;
+			$myArray = array('success'=>3);
+			$myReturnJson = json_encode($myArray);
+			echo $myReturnJson;		
 		}
 	}
 else
