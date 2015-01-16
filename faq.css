@@ -68,7 +68,7 @@ input{
 	background-color: white; 
     border-radius: 6px; 
     text-align: center;
-    tex
+    color: #372a73;
 }
 
 .questionBottom{
@@ -78,6 +78,7 @@ input{
 	background-color: white; 
     border-radius: 6px;
     text-align: center; 
+    color: #372a73;
 }
 
 
@@ -90,6 +91,6 @@ input{
 	background-color: white;
 	border-radius: 6px; 
 	text-align: center;
-
+	color: #372a73;
 }
 
