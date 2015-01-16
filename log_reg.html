@@ -60,33 +60,55 @@
 				<article class="main" id="reg">
 				<script type="text/javascript">
 				$(document).ready(function(){
-				$('#login').click(function (){
+				$('#login').click(function (ev){
+					ev.preventDefault();
 					var form = {}
 					form['user'] = document.forms["logincheck"]["user"].value;
 					form['pass'] = document.forms["logincheck"]["pass"].value;
 					// form["username"] = $('form')
 					// JSON.stringify($('form').serializeArray());
 					// alert(JSON.stringify($('form').serializeArray()));
-						// $.ajax({
-						//   type: 'post',
-						//   url: "LoginCatch.php",
-						//   dataType : 'json',
-						//   data: form,
-						//   context: document.body
-						// }).done
+						$.ajax({
+						  type: 'post',
+						  url: "LoginCatch.php",
+						  dataType : 'json',
+						  data: form,
+						  cache: false,
+						  context: document.body
+						}).done(
 
-						$.post('LoginCatch.php', form, function(myData){
-								if(myData.success >= 2)
+							function(myData){
+								if(myData.success <= 2)
 								{
-									success: window.location = 'home.html';
+									console.info(myData.success)
+									//window.location = 'home.html';
 								}
 								else
 								{
-									success: window.location = 'log_reg.html';
+									//window.location = 'home.html';
+									console.info(myData.success)
+									//alert("wrong");
 								}
 								//console.info(myData.success)
 
-						}, 'json');
+						}
+
+						);
+
+						// $.post('LoginCatch.php', form, function(myData){
+						// 		if(myData.success <= 2)
+						// 		{
+						// 			console.info(myData.success)
+						// 			window.location = 'home.html';
+						// 		}
+						// 		else
+						// 		{
+						// 			window.location = 'home.html';
+						// 			alert("wrong");
+						// 		}
+						// 		console.info(myData.success)
+
+						// }, 'json');
 
 						// success: window.location = 'home.html'
 						});

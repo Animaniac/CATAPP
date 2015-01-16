@@ -28,6 +28,9 @@ if($errorCount > 0)
 	$_SESSION['wrongp']=false;
 	$_SESSION['wrongu']=false;
 	$_SESSION['login']=false;
+	$myArray = array('success'=>3);
+	$myReturnJson = json_encode($myArray);
+	echo $myReturnJson;	
 	//header ("Location: log_reg.php");
 }
 else{
@@ -73,8 +76,11 @@ if($errorCount > 0)
 	$_SESSION['login']=false;
 	$stmt->close();
 	$dbcon->close();
-	echo ($pass."</br>");
-	echo (crypt($form_pass, $pass));
+	$myArray = array('success'=>$form_user."v1");
+	$myReturnJson = json_encode($myArray);
+	echo $myReturnJson;	
+	//echo ($pass."</br>");
+	//echo (crypt($form_pass, $pass));
 	//header ("Location: log_reg.php");
 }
 else
@@ -119,7 +125,7 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 			$_SESSION['login']=false;
 			$_SESSION['admin']=false;
 			$_SESSION['mod']=false;
-			$myArray = array('success'=>3);
+			$myArray = array('success'=>$form_user);
 			$myReturnJson = json_encode($myArray);
 			echo $myReturnJson;		
 		}
@@ -128,6 +134,9 @@ else
 	{
 		//if the username or passswords dont equal the ones on the table kick them out and set a varibale to tell them later.
 		$_SESSION['login']=false;
+		$myArray = array('success'=>3);
+		$myReturnJson = json_encode($myArray);
+		echo $myReturnJson;	
 		//header ("Location: log_reg.php");
 		mysqli_close($dbcon);
 	}
