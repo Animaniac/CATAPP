@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_destroy() ?>
 <html>
 	<title>&nbsp;</title>
 	<head>
@@ -39,7 +40,7 @@
 				        return false;
 				    }};
 				</script>
-				<form id="fromLogin" name="logincheck" method="post" action="LoginCatch.js"  class="loginPage" onsubmit="return logVal()" data-ajax="false">
+				<form id="fromLogin" name="logincheck" method="post" class="loginPage" onsubmit="return logVal()">
 					<h3><u>Login</u></h3>
 					<label for="user">Username:</label>
 					<input type="text" name="user" id="user" autofocus required>
@@ -48,7 +49,7 @@
 					<input type="password" name="pass" id="pass" required>
 				</br>
 					<a href='Forgoten.html'>Forgot password?</a>
-					<input type="submit" name="submit" id="submit" value="Login" class="buttonStyle">
+					<input type="submit" name="submit" id="login" value="Login" class="buttonStyle">
 				</form>
 				<p id="LogValText">
 				</p></article>
@@ -57,6 +58,25 @@
 				</div>
 				<article class="main" id="reg">
 				<script type="text/javascript">
+				$(document).ready(function(){
+				$('#login').click(function (){
+					var form = {}
+					form['user'] = document.forms["logincheck"]["user"].value;
+					form['pass'] = document.forms["logincheck"]["pass"].value;
+					// form["username"] = $('form')
+					// JSON.stringify($('form').serializeArray());
+					// alert(JSON.stringify($('form').serializeArray()));
+						$.ajax({
+						  type: 'post',
+						  url: "LoginCatch.php",
+						  dataType : 'json',
+						  data: form,
+						  context: document.body
+						}).done(function() {
+						  $( this ).addClass( "done" );
+						});
+						});
+			});
 
 				$(document).ready(function(){
 				$('#toggleBtn').click(function (){
