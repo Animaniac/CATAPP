@@ -37,3 +37,7 @@ nav #home:active, nav #home:hover, nav #home:visited
 	border-bottom:solid #0065c3 4px;
 
 }
+
+#banner{
+	padding-top: 7px;
+}

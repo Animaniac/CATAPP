@@ -2,34 +2,74 @@
 <html>
 	<title>&nbsp;</title>
 	<head>
+	
 		<?php
 			require_once"headder.inc.php";
 		?>
 		<link rel="stylesheet" href="faq.css" />
 	</head>
 	<body>
-		<div id="banner"></div>
+		<div id="banner">
 			<img id="cat" src="images/logo.png">
 			<img id="nhs" src="images/nhs.png">
+		</div>
+
 		<article class="main">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">
-			<img src="images/bleft.png" id="lbub">
-			<img src="images/bright.png" id="rbub">		
+
+			<div class="questionTop">			
+			<h1 class="read-more-toggle">What is CAT?</h1>				
+				<div class="read-more-content">				
+					<p>The answer to whatever question would go here!</p>
+				</div>				
+			</div>		
+			<div class="question">			
+			<h1 class="read-more-toggle">How does CAT work?</h1>				
+				<div class="read-more-content">				
+					<p>The answer to whatever question would go here!</p>
+				</div>				
+			</div>	
+			<div class="question">			
+			<h1 class="read-more-toggle">What can CAT be used to treat?</h1>		
+				<div class="read-more-content">				
+					<p>The answer to whatever question would go here!</p>
+				</div>				
+			</div>
+			<div class="question">			
+			<h1 class="read-more-toggle">What training is available from CAT?</h1>
+				<div class="read-more-content">				
+					<p>The answer to whatever question would go here!</p>
+				</div>				
+			</div>	
+			<div class="question">			
+			<h1 class="read-more-toggle">Why  was CAT developed for the NHS?</h1>	
+				<div class="read-more-content">				
+					<p>The answer to whatever question would go here!</p>
+				</div>				
+			</div>	
+			<div class="questionBottom">			
+			<h1 class="read-more-toggle">Terms &amp; Conditions</h1>				
+				<div class="read-more-content">				
+					<p><form>
+						
+						
+
+					</form></p>
+				</div>				
+			</div>	
+			
+
+					
 		</article>
-		<footer>
-		<input type="submit" name="submit" id="tc1" value="Terms &#38; Conditoins 1" class="buttonStyle">
-		<input type="submit" name="submit" id="tc2" value="Terms &#38; Conditoins 2" class="buttonStyle">
-		</br></br><a href="index.html"><input type="submit" name="submit" id="Decline" value="Decline" class="buttonStyle"></a>
-			<a href="home.html"><input type="submit" name="submit" id="Accept" value="Accept" class="buttonStyle"></a>
-		</footer>
+		
 	</body>
+	<footer>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script>
+			$('.read-more-content').addClass('hide');
+			$('.read-more-toggle').on('click', function() {
+			$(this).next('.read-more-content').toggleClass('hide');
+			});
+		</script>
+	</footer>
 </html>
