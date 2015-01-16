@@ -1,74 +1,3 @@
-/*html{
-	font-family: 'Quicksand', sans-serif;
-	background-image: url("images/pcBg.jpg");
-	background-repeat: no-repeat;
-	background-size:100%,100%;
-}
-body{
-	width:100%;
-	height:auto;
-	padding:0px;
-	margin:0px;
-	overflow:auto;
-}
-#banner{
-	z-index:100;
-	left:0px;
-	padding:0px;
-	margin:0px;
-	background-color:#007ac3;
-	width:auto;
-	height:25px;
-	margin-top:5%;
-}
-#login{
-	position:absolute;
-	z-index:0;
-	height:auto;
-	width:100%;
-	height:auto;
-	margin-top:15%;
-	display:
-}
-#logo{
-	z-index:200;
-	width:6%;
-	margin-left:40%;
-	margin-top: -35px;
-}
-header{
-	position:relative;
-	padding:0px;
-	margin:0px;
-	margin-left:35%;
-	width:30%;
-	height:auto;
-}
-header #faq{
-	float:left;
-}
-header #nhs{
-	float:right;
-}
-#face
-{
-	width:auto;
-	margin-left:20%;
-	bottom:0px;
-}
-#logreg
-{
-	width:auto;
-	margin-left:28%;
-}
-
-/*moblie*/
-@media only screen 
-and (max-device-height : 740px),
-and (max-device-width : 400px) 
-only screen and (-webkit-min-device-pixel-ratio : 1),
-only screen and (min-device-pixel-ratio : 1){
-/* Styles */*/
 html
 {
 	font-family: 'Quicksand', sans-serif;
@@ -152,5 +81,4 @@ social
 	padding:0px;
 	width:32px;
 	height:32px;
-}
 }
