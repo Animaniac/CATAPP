@@ -1,0 +1,84 @@
+html
+{
+	font-family: 'Quicksand', sans-serif;
+	background-image: url("bg6.jpg");
+	background-repeat: no-repeat;
+	background-size:450px,740px;
+}
+body{
+	width:100%;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	overflow:auto;
+}
+#login{
+	position:absolute;
+	z-index:0;
+	height:auto;
+	width:100%;
+	height:auto;
+	margin-top:45%;
+}
+#banner{
+	z-index:100;
+	left:0px;
+	padding:0px;
+	margin:0px;
+	background-color:#007ac3;
+	width:auto;
+	height:25px;
+	margin-top:10%;
+}
+#logo{
+	z-index:200;
+	width:6%;
+	margin-left:28%;
+	margin-top: -35px;
+}
+header{
+	position:relative;
+	padding:0px;
+	margin:0px;
+	margin-left:5%;
+	width:90%;
+	height:auto;
+	margin-top:33%;
+}
+header #faq{
+	float:left;
+}
+header #nhs{
+	float:right;
+}
+#face
+{
+	width:auto;
+	margin-left:20%;
+	bottom:0px;
+}
+#logreg
+{
+	width:auto;
+	margin-left:28%;
+}
+#illuminati
+{
+	position:absolute;
+	display:hidden;
+}
+social
+{
+	width:128px;
+	margin-left:29%;
+	background-color:#372a73;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.socialBtn
+{
+	margin:0px;
+	padding:0px;
+	width:32px;
+	height:32px;
+}

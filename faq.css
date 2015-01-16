@@ -1,0 +1,42 @@
+#lbub
+{
+	padding-top:5px;
+	width:50%;
+}
+#rbub
+{
+	margin-left:50%;
+	padding-top:5px;
+	width:50%;
+}
+#tc1
+{
+	float:left;
+}
+#tc2
+{
+	float:right;
+}
+footer
+{
+	position:absolute;
+	bottom:0px;
+	margin-left:5%;
+	width:90%;
+	height:15%;
+}
+#Accept
+{
+	float:right;
+}
+input
+{
+	background-color:#007ac3;
+	text-decoration:none;
+	border-radius:2px;
+	border:0px;
+	font-size: 4vw;
+	color:white;
+	border:1px solid #372a73;
+	width:auto;
+}

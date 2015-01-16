@@ -1,0 +1,36 @@
+.formContainer
+{
+	display:inline-block;
+	width:85%;
+	margin-left:5%;
+}
+.formContainer input
+{
+	width:100%;
+}
+.buttonStyle
+{
+	text-decoration:none;
+	border:0px;
+	font-weight:900;
+	color:white;
+	border-radius:0px 0px 5px 5px;
+	padding:3px;
+	margin:0px;
+	margin-left:0%;
+	margin-bottom:4px;
+	background: repeating-linear-gradient(45deg,
+	rgba(55, 42, 115, 1),
+	rgba(55, 42, 115, 1) 10px,
+	rgba(55, 42, 115, 0.8) 10px,
+	rgba(55, 42, 115, 0.8) 20px);
+}
+#submit
+{
+	width:30%;
+	float:right;
+}
+form
+{
+	margin-bottom:50px;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="log_reg.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div id="banner"></div>
+		<div id="logo">
+			<img src="images/logo.png">
+		</div>
+		<div id="buffer"></div>
+		<article class="main" id="log">
+				<script>
+				function logVal(){
+				    var user = document.forms["logincheck"]["user"].value;
+				    var pass = document.forms["logincheck"]["pass"].value;
+				    var logCount = 0;
+				    var logErrormMsg = "";
+				    if(user == null || user == "")
+				    {
+				        logCount++;
+				        LEM = "You didn't input your username</br>";
+				        logErrormMsg = logErrormMsg.concat(LEM);
+				    }
+				    if(pass == null || pass == "")
+				    {
+				        logCount++;
+				        LEM = "You didn't input your password</br>";
+				        logErrormMsg = logErrormMsg.concat(LEM);
+				    }
+					if (logCount > 0){
+				        document.getElementById("LogValText").innerHTML = logErrormMsg;
+				        return false;
+				    }};
+				</script>
+				<form id="fromLogin" name="logincheck" method="post" action="LoginCatch.js"  class="loginPage" onsubmit="return logVal()" data-ajax="false">
+					<h3><u>Login</u></h3>
+					<label for="user">Username:</label>
+					<input type="text" name="user" id="user" autofocus required>
+				</br>
+					<label for="pass">Password:</label>
+					<input type="password" name="pass" id="pass" required>
+				</br>
+					<a href='Forgoten.html'>Forgot password?</a>
+					<input type="submit" name="submit" id="submit" value="Login" class="buttonStyle">
+				</form>
+				<p id="LogValText">
+				</p></article>
+				<div id="changeForm">
+					<button id="toggleBtn" class="buttonStyle">Register</button>
+				</div>
+				<article class="main" id="reg">
+				<script type="text/javascript">
+
+				$(document).ready(function(){
+				$('#toggleBtn').click(function (){
+					$('#log').fadeOut();
+					$('#toggleBtn').fadeOut();
+					$('#reg').delay(385).fadeIn();
+					$('#toggleBtn2').delay(385).fadeIn();
+
+    				});
+				});  
+				function regVal(){
+				    var email = document.forms["registercatch"]["email"].value;
+				    var emailR = document.forms["registercatch"]["emailR"].value;
+				    var regUser = document.forms["registercatch"]["regUser"].value;
+				    var regPass = document.forms["registercatch"]["regPass"].value;
+				    var confRegPass = document.forms["registercatch"]["confRegPass"].value;
+				    var count = 0;
+				    var errormMsg = "";
+				    if(email == null || email == "")
+				    {
+				        count++;
+				        EM = "you didn't input your email</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if(emailR == null || emailR == "")
+				    {
+				        count++;
+				        EM = "you didn't input your confirmation email</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (email!=emailR) 
+				    {
+				        count++;
+				        EM = "your emails didn't match</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (regUser == null || regUser == "")
+				    {
+				        count++;
+				        EM = "you didn't input a username</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (regPass == null || regPass == "")
+				    {
+				        count++;
+				        EM = "you didn't input a password</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    var passL = regPass.length;
+				    if (passL < 8)
+				    {
+				        count++;
+				        EM = "Your password should be at least 8 characters long</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (confRegPass == null || confRegPass == "")
+				    {
+				        count++;
+				        EM = "you didn't input your confirmation password</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (regPass!=confRegPass) 
+				    {
+				        count++;
+				        EM = "your passwords didn't match</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
+				    if (count > 0){
+				        document.getElementById("RegValText").innerHTML = errormMsg;
+				        return false;
+				    }};
+				</script>
+				<form name="registercatch" method="post" action="RegisterCatch.html" onsubmit="return regVal()" class="loginPage" id="myForm" data-ajax="false">
+					<h3><u>Register</u></h3>
+					<label>E-mail:<p>*</p></lable>
+					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
+				</br>
+					<label>Confirm E-mail:<p>*</p></lable>
+					<input type="email" name="emailR" id="emailR" required placeholder="example@gmail.com">
+				</br>
+					<label>Username:<p>*</p></label>
+					<input type="text" name="regUser" id="regUser" id="regUser" required placeholder="example">
+				</br>
+					<label>Password:<p>*</p></label>
+					<input type="password" name="regPass" id="regPass" id="regPass" required placeholder="8 character minimum">
+				</br>
+					<label>Confirm Password:<p>*</p></label>
+					<input type="password" name="confRegPass" id="confRegPass" id="confRegPass" required placeholder="8 character minimum">
+				</br>
+					<input type="submit" name="submit" id="submit" value="Register" class="buttonStyle">
+				</form>
+				<p id="RegValText">
+				</p>
+				
+		</article>
+		<div id="changeForm">
+			<button id="toggleBtn2" class="buttonStyle">Login</button>
+		</div>
+				<script type="text/javascript">
+
+				$('#toggleBtn2').click(function (){
+					$('#reg').fadeOut();
+					$('#toggleBtn2').fadeOut();
+					$('#log').delay(385).fadeIn();
+					$('#toggleBtn').delay(385).fadeIn();
+				});
+					</script>
+	</body>
+</html>

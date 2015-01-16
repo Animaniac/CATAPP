@@ -1,0 +1,58 @@
+textarea
+{
+	margin-left:5%;
+    resize: none;
+	width:88%;
+	height:70%;
+}
+footer
+{
+	width:90%;
+	margin-left:5%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+footer #back
+{
+	float:left;
+	margin-right:5%;
+	margin-bottom:5px;
+}
+footer #done
+{
+margin:0px;
+}
+footer #edit
+{
+	margin-left:5%;
+	float:right;
+}
+#back
+{
+	background-color:white;
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/back.png');
+}
+#edit
+{
+	background-color:white;
+	height:33px;
+	width:34px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 6px;
+	color: transparent;
+	background-image: url('images/edit.png');
+	margin-top:0px;
+}

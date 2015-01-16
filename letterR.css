@@ -1,0 +1,26 @@
+footer
+{
+	border: 0px;
+	border-top:solid 1px black;
+	width:90%;
+	margin-top:10px;
+	margin-left: 5%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+footer input
+{
+	margin-left:34%;
+}
+#s img
+{
+	width:32px;
+}
+#exit
+{
+	border-right:0px;
+}
+#home
+{
+	margin-left:3px;
+}
