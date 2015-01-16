@@ -1,4 +1,6 @@
-
+#banner {
+	padding-top: 10px;
+}
 
 .content
 {
@@ -16,6 +18,7 @@
 	height:auto;
 	width:auto;
 	color:#372a73;
+
 }
 #m
 {

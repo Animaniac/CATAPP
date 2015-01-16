@@ -19,6 +19,7 @@ body{
 	width:auto;
 	height:25px;
 	margin-top:0px;
+	padding-top: 10px;
 }
 #cat{
 	position:absolute;
