@@ -13,47 +13,48 @@ if ($stmt = $dbcon->prepare("SELECT username,password,accountL,confirmation FROM
 		$stmt->fetch();
 if ($form_user != $user)
 {
-	$loginDetails = array('Username'=>"Wrong user name");
+	$User = array('Username'=>"Wrong username");
 	$errorCount = $errorCount + 1;
 }
 else 
 {
-	$loginDetails = array('Username'=>"Correct user name");
+	$User = array('Username'=>"Correct username");
 }
 if (crypt($form_pass, $pass)!= $pass)
 {
-	$loginDetails = array('Password'=>"Wrong user password");
+	$Pass = array('Password'=>"Wrong password");
 	$errorCount = $errorCount + 1;
 }
 else 
 {
-	$loginDetails = array('Password'=>"Correct user password");
+	$Pass = array('Password'=>"Correct password");
 }
 if ($conf == 0)
 {
-	$_SESSION['noConf']=true;
-	$loginDetails = array('NoConf'=>"Account not confirmed");
+	$conf = array('Conf'=>"Account not confirmed");
 }
 else
 {
-	$loginDetails = array('NoConf'=>"Account confirmed");
+	$conf = array('Conf'=>"Account confirmed");
 }
 if (($_SESSION['wrongp']==true) or ($_SESSION['wrongu']==true))
 {
-	$loginDetails = array('NoConf'=>"Account confirmed");
+	$conf = array('Conf'=>"Account confirmed");
 }
 if($errorCount > 0)
 {	
 	$stmt->close();
 	$dbcon->close();
-	$myReturnJson = json_encode($loginDetails);
-	echo $myReturnJson;
-	$myArray = array('success'=>$form_user."v1");
-	$myReturnJson = json_encode($myArray);
-	echo $myReturnJson;	
-	//echo ($pass."</br>");
-	//echo (crypt($form_pass, $pass));
-	//header ("Location: log_reg.php");
+	$User = json_encode($User);
+	echo $User;
+	$Pass = json_encode($Pass);
+	echo $Pass;
+	$conf = json_encode($conf);
+	echo $conf;
+	$state = array('success'=>"3");
+	$state = json_encode($state);
+	echo $state;	
+
 }
 else
 {
@@ -68,48 +69,43 @@ if (($form_user == $user) and (crypt($form_pass, $pass)== $pass))
 		{
 			$_SESSION['mod']=false;
 			$_SESSION['admin']=false;
-			//header ("Location: home.php");
-			$myArray = array('success'=>0);
-			$myReturnJson = json_encode($myArray);
-			echo $myReturnJson;		
+			$state = array('success'=>0);
+			$state = json_encode($state);
+			echo $state;		
 		}
 		else if ($accountl == 1)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=false;
-			//header ("Location: home.php");
-			$myArray = array('success'=>1);
-			$myReturnJson = json_encode($myArray);
-			echo $myReturnJson;		
+			$state = array('success'=>1);
+			$state = json_encode($state);
+			echo $state;		
 		}
 		else if ($accountl == 2)
 		{
 			$_SESSION['mod']=true;
 			$_SESSION['admin']=true;
-			// header ("Location: home.php");
-			//json_encode("home.php");
-			$myArray = array('success'=>2);
-			$myReturnJson = json_encode($myArray);
-			echo $myReturnJson;		
+			$state = array('success'=>2);
+			$state = json_encode($state);
+			echo $state;		
 		}
 		else
 		{
 			$_SESSION['login']=false;
 			$_SESSION['admin']=false;
 			$_SESSION['mod']=false;
-			$myArray = array('success'=>$form_user);
-			$myReturnJson = json_encode($myArray);
-			echo $myReturnJson;		
+			$state = array('success'=>$form_user);
+			$state = json_encode($state);
+			echo $state;		
 		}
 	}
 else
 	{
 		//if the username or passswords dont equal the ones on the table kick them out and set a varibale to tell them later.
 		$_SESSION['login']=false;
-		$myArray = array('success'=>3);
-		$myReturnJson = json_encode($myArray);
-		echo $myReturnJson;	
-		//header ("Location: log_reg.php");
+		$state = array('success'=>3);
+		$state = json_encode($state);
+		echo $state;	
 		mysqli_close($dbcon);
 	}
 	$stmt->close();

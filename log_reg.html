@@ -50,7 +50,7 @@
 				</br>
 					<a href='Forgoten.html'>Forgot password?</a>
 				</br>
-					<input type="submit" name="submit" id="login" value="Login" class="buttonStyle" >
+					<button id="login" class="buttonStyle">Login</button>
 				</form>
 				<p id="LogValText">
 				</p></article>
@@ -80,13 +80,18 @@
 							function(myData){
 								if(myData.success <= 2)
 								{
-									console.info(myData.success)
+									console.info(myData.success);
 									//window.location = 'home.html';
 								}
 								else
 								{
 									//window.location = 'home.html';
-									console.info(myData.success)
+									console.info(myData.Username);
+									// console.info(myData.status)
+									// if(myData.success == '{"Username":"Wrong username"}{"Password":"Wrong password"}{"Conf":"Account not confirmed"}{"success":"3"}')
+									// {
+									// 	alert('wrong username');
+									// }
 									//alert("wrong");
 								}
 								//console.info(myData.success)

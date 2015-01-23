@@ -1,12 +1,11 @@
 html
 {
-	font-family: sans-serif;
-}
-
-body{
-	background-image: url('images/bg6.jpg');
+	font-family: 'Quicksand', sans-serif;
+	background-image: url('images/Bg.jpg');
 	background-repeat: no-repeat;
-	background-size: 200% 200%;
+	background-size:568px,100%;
+}
+body{
 	height:auto;
 	padding:0px;
 	margin:0px;
@@ -95,9 +94,8 @@ h3{
 }
 .loginPage .buttonStyle 
 {
-	width:25%;
+	width:100%;
 	float:right;
-	padding-top:1px;
 }
 #toggleBtn, #toggleBtn2
 {
