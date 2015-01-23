@@ -14,7 +14,7 @@ body{
 #banner{
 	z-index:100;
 	left:0px;
-	padding:0px;
+	padding-top:15px;
 	margin:0px;
 	background-color:#007ac3;
 	width:auto;
@@ -26,7 +26,7 @@ body{
 	z-index:200;
 	width:40%;
 	margin-left:5%;
-	margin-top:-5px;
+	margin-top:0px;
 }
 #nhs{
 	z-index:200;
