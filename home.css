@@ -3,41 +3,6 @@
 	border:dashed black 2px;
 	border-radius:90%;
 }
-nav
-{
-	position:absolute;
-	height:auto;
-	width:100%;
-	height:10%;
-	background-color:#372a73;
-	bottom:0px;
-}
-nav #home
-{
-	display:inline-block;
-	padding:0px;
-	margin:0px;
-	height:92%;
-	width:15%;
-	margin-left:2%;
-	background:#372a73;
-	border-bottom:solid #007ac3 4px;
-	border-left:solid #35296f 2px;
-	border-right:solid #35296f 2px;
-}
-nav #home img
-{
-	height:104%;
-	width:100%;
-}
-nav #home:active, nav #home:hover, nav #home:visited
-{
-	height:95%;
-	background:#241b4d;
-	border-bottom:solid #0065c3 4px;
-
-}
-
 #banner{
 	padding-top: 7px;
 }
