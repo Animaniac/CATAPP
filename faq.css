@@ -60,6 +60,10 @@ input{
     cursor: pointer; cursor: hand;
 }
 
+.read-more-content{
+	padding-bottom: 10px;
+}
+
 .questionTop{
 	width: 75%;
 	margin: auto;
@@ -77,7 +81,7 @@ input{
     border-radius: 6px;
     text-align: left; 
     color: #372a73;
-}
+ }
 
 
 .question{
