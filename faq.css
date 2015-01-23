@@ -62,35 +62,46 @@ input{
 
 .questionTop{
 	width: 75%;
-	text-indent: 15px;
 	margin: auto;
 	margin-top: 40px;
 	background-color: white; 
     border-radius: 6px; 
-    text-align: center;
+    text-align: left;
     color: #372a73;
 }
 
 .questionBottom{
 	width: 75%;
-	text-indent: 15px;	
 	margin: auto;	
 	background-color: white; 
     border-radius: 6px;
-    text-align: center; 
+    text-align: left; 
     color: #372a73;
 }
 
 
 .question{
 	width: 75%;
-	text-indent: 15px;	
 	margin: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: white;
 	border-radius: 6px; 
-	text-align: center;
+	text-align: left;
 	color: #372a73;
 }
+
+p{
+	padding-left: 0.25cm;
+	padding-right: 0.25cm;
+	padding-top: 0.25cm;
+	padding-bottom: 0.25cm;
+}
+
+h1{
+	padding-left: 0.25cm;
+	padding-right: 0.25cm;
+	padding-top: 0.25cm;
+}
+
 
