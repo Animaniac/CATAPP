@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php session_destroy() ?>
 <html>
 	<title>&nbsp;</title>
 	<head>
@@ -52,8 +51,7 @@
 				</br>
 					<button id="login" class="buttonStyle">Login</button>
 				</form>
-				<p id="LogValText">
-				</p></article>
+				<p id="LogValText"></p></article>
 				<div id="changeForm">
 					<button id="toggleBtn" class="buttonStyle">Register</button>
 				</div>
@@ -80,43 +78,38 @@
 							function(myData){
 								if(myData.success <= 2)
 								{
-									console.info(myData.success);
-									//window.location = 'home.html';
+									window.location = 'home.html';
 								}
 								else
 								{
-									//window.location = 'home.html';
-									console.info(myData.Username);
-									// console.info(myData.status)
-									// if(myData.success == '{"Username":"Wrong username"}{"Password":"Wrong password"}{"Conf":"Account not confirmed"}{"success":"3"}')
-									// {
-									// 	alert('wrong username');
-									// }
-									//alert("wrong");
+									var logCount2 = 0;
+									console.info("failure");
+									if(myData.user == "Wrong username")
+									{
+										logCount2++;
+								        LEM2 = "You didn't input your username</br>";
+								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									}
+									if(myData.pass == "Wrong password")
+									{
+										logCount2++;
+								        LEM2 = "You didn't input your username</br>";
+								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									}
+									if(myData.conf == "Account not confirmed")
+									{
+										logCount2++;
+								        LEM2 = "You didn't input your username</br>";
+								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									}
+									if (logCount > 0)
+									{
+								        document.getElementById("LogValText").innerHTML = logErrormMsg2;
+								    }
 								}
-								//console.info(myData.success)
-
 						}
-
 						);
-
-						// $.post('LoginCatch.php', form, function(myData){
-						// 		if(myData.success <= 2)
-						// 		{
-						// 			console.info(myData.success)
-						// 			window.location = 'home.html';
-						// 		}
-						// 		else
-						// 		{
-						// 			window.location = 'home.html';
-						// 			alert("wrong");
-						// 		}
-						// 		console.info(myData.success)
-
-						// }, 'json');
-
-						// success: window.location = 'home.html'
-						});
+				});
 			});
 
 				$(document).ready(function(){
