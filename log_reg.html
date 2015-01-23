@@ -17,7 +17,9 @@
 		<div id="buffer"></div>
 		<article class="main" id="log">
 				<script>
-				function logVal(){
+				$(document).ready(function(){
+				$('#login').click(function (ev){
+					ev.preventDefault();
 				    var user = document.forms["logincheck"]["user"].value;
 				    var pass = document.forms["logincheck"]["pass"].value;
 				    var logCount = 0;
@@ -37,30 +39,8 @@
 					if (logCount > 0){
 				        document.getElementById("LogValText").innerHTML = logErrormMsg;
 				        return false;
-				    }};
-				</script>
-				<form id="fromLogin" name="logincheck" method="post" class="loginPage" onsubmit="return logVal()">
-					<h3><u>Login</u></h3>
-					<label for="user">Username:</label>
-					<input type="text" name="user" id="user" autofocus required>
-				</br>
-					<label for="pass">Password:</label>
-					<input type="password" name="pass" id="pass" required>
-				</br>
-					<a href='Forgoten.html'>Forgot password?</a>
-				</br>
-					<button id="login" class="buttonStyle">Login</button>
-				</form>
-				<p id="LogValText"></p></article>
-				<div id="changeForm">
-					<button id="toggleBtn" class="buttonStyle">Register</button>
-				</div>
-				<article class="main" id="reg">
-				<script type="text/javascript">
-				$(document).ready(function(){
-				$('#login').click(function (ev){
-					ev.preventDefault();
-					var form = {}
+				    }
+				    var form = {}
 					form['user'] = document.forms["logincheck"]["user"].value;
 					form['pass'] = document.forms["logincheck"]["pass"].value;
 						$.ajax({
@@ -108,17 +88,72 @@
 							});
 						});
 					});
+				</script>
+				<form id="fromLogin" name="logincheck" method="post" class="loginPage" onclick="return logVal()">
+					<h3><u>Login</u></h3>
+					<label for="user">Username:</label>
+					<input type="text" name="user" id="user" autofocus required>
+				</br>
+					<label for="pass">Password:</label>
+					<input type="password" name="pass" id="pass" required>
+				</br>
+					<a href='Forgoten.html'>Forgot password?</a>
+				</br>
+					<button id="login" class="buttonStyle">Login</button>
+				</form>
+				<p id="LogValText"></p></article>
+				<div id="changeForm">
+					<button id="toggleBtn" class="buttonStyle">Register</button>
+				</div>
+				<article class="main" id="reg">
+				<script type="text/javascript">					
 				$(document).ready(function(){
 				$('#toggleBtn').click(function (){
 					$('#log').fadeOut();
 					$('#toggleBtn').fadeOut();
 					$('#reg').delay(385).fadeIn();
 					$('#toggleBtn2').delay(385).fadeIn();
-
+					document.getElementById("LogValText").innerHTML = "";
     				});
 				});  
-				function regVal(){
-				    var email = document.forms["registercatch"]["email"].value;
+				</script>
+				<form name="registercatch" method="post" onclick="return regVal()" class="loginPage" id="myForm">
+					<h3><u>Register</u></h3>
+					<label>E-mail:<p>*</p></lable>
+					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
+				</br>
+					<label>Confirm E-mail:<p>*</p></lable>
+					<input type="email" name="emailR" id="emailR" required placeholder="example@gmail.com">
+				</br>
+					<label>Username:<p>*</p></label>
+					<input type="text" name="regUser" id="regUser" id="regUser" required placeholder="example">
+				</br>
+					<label>Password:<p>*</p></label>
+					<input type="password" name="regPass" id="regPass" id="regPass" required placeholder="8 character minimum">
+				</br>
+					<label>Confirm Password:<p>*</p></label>
+					<input type="password" name="confRegPass" id="confRegPass" id="confRegPass" required placeholder="8 character minimum">
+				</br>
+					<button id="register" class="buttonStyle">Register</button>
+				</form>
+				<p id="RegValText"></p></article>
+		<div id="changeForm">
+			<button id="toggleBtn2" class="buttonStyle">Login</button>
+		</div>
+				<script type="text/javascript">
+				$('#toggleBtn2').click(function (){
+					$('#reg').fadeOut();
+					$('#toggleBtn2').fadeOut();
+					$('#log').delay(385).fadeIn();
+					$('#toggleBtn').delay(385).fadeIn();
+					document.getElementById("RegValText").innerHTML = "";
+				});
+				</script>
+				<script type="text/javascript">
+				$(document).ready(function(){
+				$('#register').click(function (ev){
+					ev.preventDefault();
+					var email = document.forms["registercatch"]["email"].value;
 				    var emailR = document.forms["registercatch"]["emailR"].value;
 				    var regUser = document.forms["registercatch"]["regUser"].value;
 				    var regPass = document.forms["registercatch"]["regPass"].value;
@@ -162,6 +197,13 @@
 				        EM = "Your password should be at least 8 characters long</br>";
 				        errormMsg = errormMsg.concat(EM);
 				    }
+				    var confPassL = confPassL.length;
+				    if (confPassL < 8)
+				    {
+				        count++;
+				        EM = "Your Confrimation password should be at least 8 characters long</br>";
+				        errormMsg = errormMsg.concat(EM);
+				    }
 				    if (confRegPass == null || confRegPass == "")
 				    {
 				        count++;
@@ -177,47 +219,7 @@
 				    if (count > 0){
 				        document.getElementById("RegValText").innerHTML = errormMsg;
 				        return false;
-				    }};
-				</script>
-				<form name="registercatch" method="post" onsubmit="return regVal()" class="loginPage" id="myForm">
-					<h3><u>Register</u></h3>
-					<label>E-mail:<p>*</p></lable>
-					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
-				</br>
-					<label>Confirm E-mail:<p>*</p></lable>
-					<input type="email" name="emailR" id="emailR" required placeholder="example@gmail.com">
-				</br>
-					<label>Username:<p>*</p></label>
-					<input type="text" name="regUser" id="regUser" id="regUser" required placeholder="example">
-				</br>
-					<label>Password:<p>*</p></label>
-					<input type="password" name="regPass" id="regPass" id="regPass" required placeholder="8 character minimum">
-				</br>
-					<label>Confirm Password:<p>*</p></label>
-					<input type="password" name="confRegPass" id="confRegPass" id="confRegPass" required placeholder="8 character minimum">
-				</br>
-					<button id="register" class="buttonStyle">Register</button>
-				</form>
-				<p id="RegValText">
-				</p>
-				
-		</article>
-		<div id="changeForm">
-			<button id="toggleBtn2" class="buttonStyle">Login</button>
-		</div>
-				<script type="text/javascript">
-
-				$('#toggleBtn2').click(function (){
-					$('#reg').fadeOut();
-					$('#toggleBtn2').fadeOut();
-					$('#log').delay(385).fadeIn();
-					$('#toggleBtn').delay(385).fadeIn();
-				});
-					</script>
-				<script type="text/javascript">
-				$(document).ready(function(){
-				$('#register').click(function (ev){
-					ev.preventDefault();
+				    }
 					var form = {}
 					form['email'] = document.forms["registercatch"]["email"].value;
 				    form['emailR'] = document.forms["registercatch"]["emailR"].value;
@@ -240,31 +242,31 @@
 								}
 								else
 								{
-									// var logCount2 = 0;
-									// var logErrormMsg2 = "";
-									// console.info("failure");
-									// if(myData.user == "Wrong username")
-									// {
-									// 	logCount2++;
-								 //        LEM2 = "You didn't input the correct username</br>";
-								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
-									// }
-									// if(myData.pass == "Wrong password")
-									// {
-									// 	logCount2++;
-								 //        LEM2 = "You didn't input the correct password</br>";
-								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
-									// }
-									// if(myData.conf == "Account not confirmed")
-									// {
-									// 	logCount2++;
-								 //        LEM2 = "Your account is not confiermed </br>";
-								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
-									// }
-									// if (logCount2 > 0)
-									// {
-								 //        document.getElementById("LogValText").innerHTML = logErrormMsg2;
-								 //    }
+									var logCount3 = 0;
+									var logErrormMsg3 = "";
+									console.info("failure");
+									if(myData.emailValid == "Invalid Email")
+									{
+										logCount3++;
+								        LEM3 = "Invalid Email address.</br>";
+								        logErrormMsg3 = logErrormMsg3.concat(LEM3);
+									}
+									if(myData.regTaken == "Username Taken")
+									{
+										logCount3++;
+								        LEM3 = "Username already exsists</br>";
+								        logErrormMsg3 = logErrormMsg3.concat(LEM3);
+									}
+									if(myData.emailTaken == "Email Taken")
+									{
+										logCount3++;
+								        LEM3 = "Email Adress already in use</br>";
+								        logErrormMsg3 = logErrormMsg3.concat(LEM3);
+									}
+									if (logCount3 > 0)
+									{
+								        document.getElementById("RegValText").innerHTML = logErrormMsg3;
+								    }
 								}
 							});
 						});
