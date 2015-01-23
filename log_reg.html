@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="log_reg.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
 	<body>
 		<div id="banner"></div>
@@ -63,9 +63,6 @@
 					var form = {}
 					form['user'] = document.forms["logincheck"]["user"].value;
 					form['pass'] = document.forms["logincheck"]["pass"].value;
-					// form["username"] = $('form')
-					// JSON.stringify($('form').serializeArray());
-					// alert(JSON.stringify($('form').serializeArray()));
 						$.ajax({
 						  type: 'post',
 						  url: "LoginCatch.php",
@@ -83,35 +80,34 @@
 								else
 								{
 									var logCount2 = 0;
+									var logErrormMsg2 = "";
 									console.info("failure");
 									if(myData.user == "Wrong username")
 									{
 										logCount2++;
-								        LEM2 = "You didn't input your username</br>";
+								        LEM2 = "You didn't input the correct username</br>";
 								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
 									}
 									if(myData.pass == "Wrong password")
 									{
 										logCount2++;
-								        LEM2 = "You didn't input your username</br>";
+								        LEM2 = "You didn't input the correct password</br>";
 								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
 									}
 									if(myData.conf == "Account not confirmed")
 									{
 										logCount2++;
-								        LEM2 = "You didn't input your username</br>";
+								        LEM2 = "Your account is not confiermed </br>";
 								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
 									}
-									if (logCount > 0)
+									if (logCount2 > 0)
 									{
 								        document.getElementById("LogValText").innerHTML = logErrormMsg2;
 								    }
 								}
-						}
-						);
-				});
-			});
-
+							});
+						});
+					});
 				$(document).ready(function(){
 				$('#toggleBtn').click(function (){
 					$('#log').fadeOut();
@@ -183,7 +179,7 @@
 				        return false;
 				    }};
 				</script>
-				<form name="registercatch" method="post" action="RegisterCatch.php" onsubmit="return regVal()" class="loginPage" id="myForm" data-ajax="false">
+				<form name="registercatch" method="post" onsubmit="return regVal()" class="loginPage" id="myForm">
 					<h3><u>Register</u></h3>
 					<label>E-mail:<p>*</p></lable>
 					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
@@ -200,7 +196,7 @@
 					<label>Confirm Password:<p>*</p></label>
 					<input type="password" name="confRegPass" id="confRegPass" id="confRegPass" required placeholder="8 character minimum">
 				</br>
-					<input type="submit" name="submit" id="submit" value="Register" class="buttonStyle">
+					<button id="register" class="buttonStyle">Register</button>
 				</form>
 				<p id="RegValText">
 				</p>
@@ -218,5 +214,61 @@
 					$('#toggleBtn').delay(385).fadeIn();
 				});
 					</script>
+				<script type="text/javascript">
+				$(document).ready(function(){
+				$('#register').click(function (ev){
+					ev.preventDefault();
+					var form = {}
+					form['email'] = document.forms["registercatch"]["email"].value;
+				    form['emailR'] = document.forms["registercatch"]["emailR"].value;
+				    form['regUser'] = document.forms["registercatch"]["regUser"].value;
+				    form['regPass'] = document.forms["registercatch"]["regPass"].value;
+				    form['confRegUser'] = document.forms["registercatch"]["confRegPass"].value;
+						$.ajax({
+						  type: 'post',
+						  url: "RegisterCatch.php",
+						  dataType : 'json',
+						  data: form,
+						  cache: false,
+						  context: document.body
+						}).done(
+
+							function(myData){
+								if(myData.success <= 2)
+								{
+									window.location = 'home.html';
+								}
+								else
+								{
+									// var logCount2 = 0;
+									// var logErrormMsg2 = "";
+									// console.info("failure");
+									// if(myData.user == "Wrong username")
+									// {
+									// 	logCount2++;
+								 //        LEM2 = "You didn't input the correct username</br>";
+								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									// }
+									// if(myData.pass == "Wrong password")
+									// {
+									// 	logCount2++;
+								 //        LEM2 = "You didn't input the correct password</br>";
+								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									// }
+									// if(myData.conf == "Account not confirmed")
+									// {
+									// 	logCount2++;
+								 //        LEM2 = "Your account is not confiermed </br>";
+								 //        logErrormMsg2 = logErrormMsg2.concat(LEM2);
+									// }
+									// if (logCount2 > 0)
+									// {
+								 //        document.getElementById("LogValText").innerHTML = logErrormMsg2;
+								 //    }
+								}
+							});
+						});
+					});
+				</script>
 	</body>
 </html>

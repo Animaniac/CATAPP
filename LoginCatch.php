@@ -29,6 +29,8 @@ else
 {
 	$pass = array('pass'=>"Correct password");
 }
+if ($errorCount > 0)
+{
 if ($conf == 0)
 {
 	$conf = array('conf'=>"Account not confirmed");
@@ -36,7 +38,7 @@ if ($conf == 0)
 else
 {
 	$conf = array('conf'=>"Account confirmed");
-}
+}}
 if($errorCount > 0)
 {	
 	$stmt->close();
