@@ -1,8 +1,5 @@
 #s img
 {
-	border:dashed black 2px;
+	border:solid white 1px;
 	border-radius:90%;
-}
-#banner{
-	padding-top: 7px;
 }

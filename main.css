@@ -21,6 +21,7 @@ body{
 	width:100%;
 	height:40px;
 	margin-top:0px;
+	margin-bottom: 20px;
 }
 #cat{
 	position:absolute;
@@ -28,6 +29,7 @@ body{
 	width:40%;
 	margin-left:5%;
 	margin-top:5px;
+	margin-bottom: 15px;
 }
 #nhs{
 	z-index:200;
