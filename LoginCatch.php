@@ -29,7 +29,7 @@ else
 {
 	$pass = array('pass'=>"Correct password");
 }
-if ($errorCount > 0)
+if ($errorCount >= 0)
 {
 if ($conf == 0)
 {

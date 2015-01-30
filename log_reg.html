@@ -89,7 +89,7 @@
 						});
 					});
 				</script>
-				<form id="fromLogin" name="logincheck" method="post" class="loginPage" onclick="return logVal()">
+				<form id="fromLogin" name="logincheck" method="post" class="loginPage">
 					<h3><u>Login</u></h3>
 					<label for="user">Username:</label>
 					<input type="text" name="user" id="user" autofocus required>
@@ -116,38 +116,6 @@
 					document.getElementById("LogValText").innerHTML = "";
     				});
 				});  
-				</script>
-				<form name="registercatch" method="post" onclick="return regVal()" class="loginPage" id="myForm">
-					<h3><u>Register</u></h3>
-					<label>E-mail:<p>*</p></lable>
-					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
-				</br>
-					<label>Confirm E-mail:<p>*</p></lable>
-					<input type="email" name="emailR" id="emailR" required placeholder="example@gmail.com">
-				</br>
-					<label>Username:<p>*</p></label>
-					<input type="text" name="regUser" id="regUser" id="regUser" required placeholder="example">
-				</br>
-					<label>Password:<p>*</p></label>
-					<input type="password" name="regPass" id="regPass" id="regPass" required placeholder="8 character minimum">
-				</br>
-					<label>Confirm Password:<p>*</p></label>
-					<input type="password" name="confRegPass" id="confRegPass" id="confRegPass" required placeholder="8 character minimum">
-				</br>
-					<button id="register" class="buttonStyle">Register</button>
-				</form>
-				<p id="RegValText"></p></article>
-		<div id="changeForm">
-			<button id="toggleBtn2" class="buttonStyle">Login</button>
-		</div>
-				<script type="text/javascript">
-				$('#toggleBtn2').click(function (){
-					$('#reg').fadeOut();
-					$('#toggleBtn2').fadeOut();
-					$('#log').delay(385).fadeIn();
-					$('#toggleBtn').delay(385).fadeIn();
-					document.getElementById("RegValText").innerHTML = "";
-				});
 				</script>
 				<script type="text/javascript">
 				$(document).ready(function(){
@@ -197,8 +165,8 @@
 				        EM = "Your password should be at least 8 characters long</br>";
 				        errormMsg = errormMsg.concat(EM);
 				    }
-				    var confPassL = confPassL.length;
-				    if (confPassL < 8)
+				    var confRegPassL = confRegPass.length;
+				    if (confRegPassL < 8)
 				    {
 				        count++;
 				        EM = "Your Confrimation password should be at least 8 characters long</br>";
@@ -210,7 +178,7 @@
 				        EM = "you didn't input your confirmation password</br>";
 				        errormMsg = errormMsg.concat(EM);
 				    }
-				    if (regPass!=confRegPass) 
+				    if (regPass != confRegPass) 
 				    {
 				        count++;
 				        EM = "your passwords didn't match</br>";
@@ -234,7 +202,6 @@
 						  cache: false,
 						  context: document.body
 						}).done(
-
 							function(myData){
 								if(myData.success <= 2)
 								{
@@ -242,7 +209,6 @@
 								}
 								else
 								{
-									var logCount3 = 0;
 									var logErrormMsg3 = "";
 									console.info("failure");
 									if(myData.emailValid == "Invalid Email")
@@ -266,11 +232,44 @@
 									if (logCount3 > 0)
 									{
 								        document.getElementById("RegValText").innerHTML = logErrormMsg3;
+								        document.getElementById("RegValText").focus();
 								    }
 								}
 							});
 						});
 					});
+				</script>
+				<form id="registercatch" name="registercatch" method="post" class="loginPage">
+					<h3><u>Register</u></h3>
+					<label>E-mail:<p>*</p></lable>
+					<input type="email" name="email" id="email" required placeholder="example@gmail.com">
+				</br>
+					<label>Confirm E-mail:<p>*</p></lable>
+					<input type="email" name="emailR" id="emailR" required placeholder="example@gmail.com">
+				</br>
+					<label>Username:<p>*</p></label>
+					<input type="text" name="regUser" id="regUser" required placeholder="example">
+				</br>
+					<label>Password:<p>*</p></label>
+					<input type="password" name="regPass" id="regPass" required placeholder="8 character minimum">
+				</br>
+					<label>Confirm Password:<p>*</p></label>
+					<input type="password" name="confRegPass" id="confRegPass" required placeholder="8 character minimum">
+				</br>
+					<button id="register" class="buttonStyle">Register</button>
+				</form>
+				<p id="RegValText"></p></article>
+		<div id="changeForm">
+			<button id="toggleBtn2" class="buttonStyle">Login</button>
+		</div>
+				<script type="text/javascript">
+				$('#toggleBtn2').click(function (){
+					$('#reg').fadeOut();
+					$('#toggleBtn2').fadeOut();
+					$('#log').delay(385).fadeIn();
+					$('#toggleBtn').delay(385).fadeIn();
+					document.getElementById("RegValText").innerHTML = "";
+				});
 				</script>
 	</body>
 </html>
