@@ -52,7 +52,7 @@ if($errorCount <= 0)
 	$empty ="";
 	$confirmation = rand();
 	include"connect.inc.php";
-if ($stmt = $dbcon->prepare("INSERT INTO Users(ID,email,username,password,accountL,confirmation,confcode) 
+if ($stmt = $dbcon->prepare("INSERT INTO users(ID,email,username,password,accountL,confirmation,confcode) 
 										VALUES (?,?,?,?,?,?,?)")) {
 		$stmt->bind_param('ssssiss',$null ,$email, $regUser, $regPass, $accountl, $null, $confirmation);
 		$stmt->execute();
