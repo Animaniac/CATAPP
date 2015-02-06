@@ -45,7 +45,7 @@
 					form['pass'] = document.forms["logincheck"]["pass"].value;
 						$.ajax({
 						  type: 'post',
-						  url: "LoginCatch.php",
+						  url: "http://catapp.addwebdesign.co.uk/LoginCatch.php",
 						  dataType : 'json',
 						  data: form,
 						  cache: false,
@@ -57,11 +57,11 @@
 								{
 									if(myData.success == 2 || myData.success == 1)
 									{
-										window.location = 'admin.html';
+										window.location = 'http://catapp.addwebdesign.co.uk/admin.html';
 									}
 									else
 									{
-										window.location = 'home.html';
+										window.location = 'http://catapp.addwebdesign.co.uk/home.html';
 									}
 								}
 								else
@@ -203,7 +203,7 @@
 				    form['confRegUser'] = document.forms["registercatch"]["confRegPass"].value;
 						$.ajax({
 						  type: 'post',
-						  url: "RegisterCatch.php",
+						  url: "http://catapp.addwebdesign.co.uk/RegisterCatch.php",
 						  dataType : 'json',
 						  data: form,
 						  cache: false,
@@ -212,7 +212,7 @@
 							function(myData){
 								if(myData.success <= 2)
 								{
-									window.location = 'home.html';
+									window.location = 'http://catapp.addwebdesign.co.uk/home.html';
 								}
 								else
 								{
