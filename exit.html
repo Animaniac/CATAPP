@@ -1,5 +1,7 @@
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
+        function onLoad()
+        {
             if(navigator.app)
             {
 	        navigator.app.exitApp();
@@ -8,4 +10,7 @@
 			{
 			        navigator.device.exitApp();
 			}
+		}
         </script>
+         <body onload="onLoad();">
+    </body>
