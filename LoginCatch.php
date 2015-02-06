@@ -6,10 +6,10 @@ session_start();
 	$errorCount = 0;
 	//if the inputted data is equal to nothing then set the vaibale for telling them that and send them back to the login page
 include"connect.inc.php";
-if ($stmt = $dbcon->prepare("SELECT username,password,accountL,confirmation FROM users WHERE username=?")) {
+if ($stmt = $dbcon->prepare("SELECT username,password,accountL FROM users WHERE username=?")) {
 		$stmt->bind_param('s', $form_user);
 		$stmt->execute();
-		$stmt->bind_result($user, $pass, $accountl,$conf);
+		$stmt->bind_result($user, $pass, $accountl);
 		$stmt->fetch();
 if ($form_user != $user)
 {
