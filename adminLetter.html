@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-enhance="false">
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>
+	$(document).on('mobileinit', function () {
+	    $.mobile.ignoreContentEnabled = true;
+	});
+	</script>
+	<link rel="stylesheet" href="main.css"/>
+	<link rel="stylesheet" href="alarm.css"/>
+	</head>
+	<body>
+		<script>
+			$(document).ready(function()
+			{
+				$.ajax({
+					type: 'post',
+					url: "patients.php",
+					dataType : 'json',
+					cache: false,
+					context: document.body
+				}).done(function(myData)
+				{
+					$.each(myData, function(key, value) {   
+					     $('#mySelect')
+					     	.append($('<option>', { value : key })
+					     	.text(value));
+					});
+				});
+			});
+		</script>
+		<div id="banner"></div>
+			<img id="cat" src="images/logo.png">
+			<img id="nhs" src="images/nhs.png">
+		<article class="main">
+			<u><h2>Patients</h2></u>
+			<form id="alarmSettings">
+		<div class="content" id="l">
+			<div class="content" id="s"><lable>Username:</lable></div>
+			<div class="content" id="m">
+				<select id ="mySelect">
+				</select>				
+			</div>
+		</div>
+		<div class="content" id="l">
+			<div class="content" id="s"><lable>Title:</lable></div>
+			<div class="content" id="m">
+				<input type="text" name="title" id="title">	
+			</div>
+		</div>
+		<u><h2 id="letter">Letter</h2></u>
+			<textarea rows="12" name="post" id="AdminL"></textarea>
+			<div id="feedback"></div>
+		<footer>
+				<button name="back" id="back" class="buttonStyle"></button>
+				<form>
+					<button name="save" id="save" class="buttonStyle"></button>
+				</form>
+				<script>
+				$(document).ready(function(){
+				$('#save').click(function (ev){
+					ev.preventDefault();
+					var patient = $('#mySelect option:selected').text();
+					var title = $('#title').val();
+					var letter = $('#AdminL').val();
+					if (title == null || title == "")
+					{$('#feedback').html("You forgot the title!");}
+					else if (letter == null || letter == "")
+					{$('#feedback').html("You forgot the letter!");}
+					else{
+					var form = {}
+					form['patient'] = patient;
+					form['title'] = title;
+					form['letter'] = letter;
+						$.ajax({
+						  type: 'post',
+						  url: "letterUpload.php",
+						  dataType : 'json',
+						  data: form,
+						  cache: false,
+						  context: document.body
+						}).done(function(myData){
+							console.info(myData);
+							if(myData.state == "Success!")
+								{
+									$('#feedback').html("Letter sent");
+								}
+								else
+								{
+									$('#feedback').html("Server not reasponding");
+								}
+						});}
+					});
+					});
+				</script>
+			</footer>
+		</article>
+		<nav>
+			<a href="admin.html"><div id="home"><img src="images/homeNav.png"></div></a>
+			<a href="sessionM.html"><div id="home"><img src="images/noteNav.png"></div></a>
+			<a href="alarm.html"><div id="home"><img src="images/clockNav.png"></div></a>
+			<a href="settings.html"><div id="home"><img src="images/settingsNav.png"></div></a>
+			<a href=""><div id="home"><img src="images/exitNav.png"></div></a>
+		</nav>
+	</body>
+</html>

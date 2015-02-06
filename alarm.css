@@ -1,7 +1,6 @@
 #banner {
 	padding-top: 10px;
 }
-
 .content
 {
 	padding:0px;
@@ -16,19 +15,26 @@
 	padding-top:1%;
 	float:left;
 	height:auto;
-	width:auto;
+	width:35%;
 	color:#372a73;
-
+	margin:0px;
+	margin-top:20px;
 }
 #m
 {
-	float:left;
+	float:right;
 	height:70%;
-	width:70%;
+	width:65%;
+	margin:0px;
+	margin-top:20px;
 }
 #m input
 {
 	width:100%;
+}
+#title
+{
+	width:90%;
 }
 #m select, #m lable
 {
@@ -70,14 +76,14 @@ form
 }
 footer
 {
+	position: fixed;
 	border: 0px;
 	border-top:solid 1px black;
 	width:90%;
 	margin-left: 5%;
-	margin-top:35%;
 	padding-top:10px;
 	padding-bottom:50px;
-	bottom:0px;
+	bottom:5%;
 }
 #back
 {
@@ -108,4 +114,23 @@ footer
 	border-radius: 90px;
 	color: transparent;
 	background-image: url('images/save.png');
+}
+h3
+{
+	padding:0px;
+	padding-top:8px;
+	margin:0px;
+	font-size: 3vw;
+}
+#input
+{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:auto;
+}
+#letter
+{
+	margin-top:0px;
+	text-align: center;
 }

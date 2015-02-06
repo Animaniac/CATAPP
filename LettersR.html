@@ -21,7 +21,7 @@
 			{
 				$.ajax({
 					type: 'post',
-					url: "sessionMDownload.php",
+					url: "letterMDownload.php",
 					dataType : 'json',
 					cache: false,
 					context: document.body
@@ -30,6 +30,9 @@
 					console.log(myData);
 					var count = 0;
 					$.each(myData, function(index, value) {
+						console.dir(value);
+						console.info(value[0]);
+						//count = count + 0.5;
 						if(myData.state == "server down")
 						{
 							$('#input').append('<h2>server down</h2>')

@@ -52,8 +52,14 @@ else
 {
 	$_SESSION['login']=true;
 	$_SESSION['currentUser']=$form_user;
-	$_SESSION['timeStamp']=time();
-	$_SESSION['currentUser'] = $user;
+	date_default_timezone_set('GMT');
+	$timeStamp = (date('Y-m-d h:i:s', time()));
+	include"connect.inc.php";
+	if ($stmt = $dbcon->prepare("UPDATE users SET lastActive = ? WHERE username = ?")) 
+	{
+		$stmt->bind_param('ss',$timeStamp,$form_user);
+		$stmt->execute();
+	}
 	//this is just for expantion so that i can set levels for the users, ie admin/mod/user
 	if ($accountl == 0)
 	{
@@ -92,6 +98,5 @@ else
 		$result = json_encode($result);
 		echo($result);		
 	}
-$stmt->close();
 $dbcon->close();}}
 ?>

@@ -4,8 +4,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="log_reg.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="log_reg.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	</head>
@@ -55,7 +55,14 @@
 							function(myData){
 								if(myData.success <= 2)
 								{
-									window.location = 'home.html';
+									if(myData.success == 2 || myData.success == 1)
+									{
+										window.location = 'admin.html';
+									}
+									else
+									{
+										window.location = 'home.html';
+									}
 								}
 								else
 								{
@@ -99,8 +106,8 @@
 				</br>
 					<a href='Forgoten.html'>Forgot password?</a>
 				</br>
-					<button id="login" class="buttonStyle">Login</button>
-				</form>
+				<button id="login" class="buttonStyle">Login</button>
+				</form></br>
 				<p id="LogValText"></p></article>
 				<div id="changeForm">
 					<button id="toggleBtn" class="buttonStyle">Register</button>
@@ -210,6 +217,8 @@
 								else
 								{
 									var logErrormMsg3 = "";
+									var logCount3 = 0;
+									var LEM = "";
 									console.info("failure");
 									if(myData.emailValid == "Invalid Email")
 									{
@@ -256,7 +265,7 @@
 					<label>Confirm Password:<p>*</p></label>
 					<input type="password" name="confRegPass" id="confRegPass" required placeholder="8 character minimum">
 				</br>
-					<button id="register" class="buttonStyle">Register</button>
+				<button id="register" class="buttonStyle">Register</button>
 				</form>
 				<p id="RegValText"></p></article>
 		<div id="changeForm">

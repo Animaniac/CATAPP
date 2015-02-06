@@ -1,7 +1,7 @@
 html
 {
 	font-family: 'Quicksand', sans-serif;
-	background-image: url("images/Bg6.jpg");
+	background-image: url("images/Bg.jpg");
 	background-repeat: no-repeat;
 	background-size:450px,740px;
 }
@@ -25,7 +25,7 @@ body{
 	left:0px;
 	padding:0px;
 	margin:0px;
-	background-color:#007ac3;
+	background-color:#2980b9;
 	width:auto;
 	height:25px;
 	margin-top:10%;
@@ -82,4 +82,45 @@ social
 	width:32px;
 	height:32px;
 	padding-top: 20px;
+}
+@media screen and (min-width: 450px) {
+    html
+    {
+		background-image: url("images/pcBg.jpg");
+		background-repeat: no-repeat;
+		background-size:100%,100%;
+    }
+    social
+	{
+		margin-left: 46%;
+	    margin-right: auto;
+	}
+	.socialBtn
+	{
+		margin:0px;
+		padding:0px;
+		width:3%;
+		height:3%;
+		padding-top: 2%;
+	}
+	header
+	{
+		margin-top:10%;
+	}
+	#logo
+	{
+		margin-left: auto;
+	    margin-right: auto;
+	}
+	#login
+	{
+		position:relative;
+		z-index:0;
+		height:auto;
+		width:auto;
+		height:auto;
+		margin-top:20%;
+		margin-left: auto;
+	    margin-right: auto;
+	}
 }
