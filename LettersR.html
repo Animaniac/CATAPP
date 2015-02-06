@@ -30,19 +30,21 @@
 					console.log(myData);
 					var count = 0;
 					$.each(myData, function(index, value) {
-						console.dir(value);
-						console.info(value[0]);
-						//count = count + 0.5;
 						if(myData.state == "server down")
 						{
 							$('#input').append('<h2>server down</h2>')
 						}
 						else
 						{
-							$('#input').append('<a href=""><div class="content" id="l"><div class="content" id="m"><h3><u>'+ value[1] + "</u> - " + value[0] +'</h3></div><div class="content" id="s"><img src="images/delete.png"></div></div></a>');
+							$('#input').append('<div class="content" id="l"><div class="content" id="m"><h3><u>'+ value[1] + "</u> - " + value[0] +'</h3></div><div class="content" id="s"><button id="show">show</button></div></div><div id="letter"><h3>From: '+ value[2] +'</h3><p>'+value[3] +'</p></div>');
 						}
 					});
 				});
+			});
+		</script>
+		<script>
+		$("#show").click(function(){
+				$("#letter").toggle();
 			});
 		</script>
 		<div id="banner"></div>
@@ -50,6 +52,7 @@
 			<img id="nhs" src="images/nhs.png">
 		<article class="main" id="input">
 			<u><h2>Doctors Letters</h2></u>
+			
 		</article>
 		<nav>
 			<a href="home.html"><div id="home"><img src="images/homeNav.png"></div></a>
