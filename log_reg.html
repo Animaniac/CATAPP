@@ -81,12 +81,6 @@
 								        LEM2 = "You didn't input the correct password</br>";
 								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
 									}
-									if(myData.conf == "Account not confirmed")
-									{
-										logCount2++;
-								        LEM2 = "Your account is not confiermed </br>";
-								        logErrormMsg2 = logErrormMsg2.concat(LEM2);
-									}
 									if (logCount2 > 0)
 									{
 								        document.getElementById("LogValText").innerHTML = logErrormMsg2;

@@ -29,22 +29,12 @@ else
 {
 	$pass = array('pass'=>"Correct password");
 }
-if ($errorCount >= 0)
-{
-if ($conf == 0)
-{
-	$conf = array('conf'=>"Account not confirmed");
-}
-else
-{
-	$conf = array('conf'=>"Account confirmed");
-}}
 if($errorCount > 0)
 {	
 	$stmt->close();
 	$dbcon->close();
 	$state = array('success'=>"3");
-	$result = array_merge($user, $pass, $conf, $state);
+	$result = array_merge($user, $pass, $state);
 	$result = json_encode($result);
 	echo($result);
 }
@@ -66,7 +56,7 @@ else
 		$_SESSION['mod']=false;
 		$_SESSION['admin']=false;
 		$state = array('success'=>0);
-		$result = array_merge($user, $pass, $conf, $state);
+		$result = array_merge($user, $pass, $state);
 		$result = json_encode($result);
 		echo($result);	
 	}
@@ -75,7 +65,7 @@ else
 		$_SESSION['mod']=true;
 		$_SESSION['admin']=false;
 		$state = array('success'=>1);
-		$result = array_merge($user, $pass, $conf, $state);
+		$result = array_merge($user, $pass, $state);
 		$result = json_encode($result);
 		echo($result);
 	}
@@ -84,7 +74,7 @@ else
 		$_SESSION['mod']=true;
 		$_SESSION['admin']=true;
 		$state = array('success'=>2);
-		$result = array_merge($user, $pass, $conf, $state);
+		$result = array_merge($user, $pass, $state);
 		$result = json_encode($result);
 		echo($result);
 	}
@@ -94,7 +84,7 @@ else
 		$_SESSION['admin']=false;
 		$_SESSION['mod']=false;
 		$state = array('success'=>3);
-		$result = array_merge($user, $pass, $conf, $state);
+		$result = array_merge($user, $pass, $state);
 		$result = json_encode($result);
 		echo($result);		
 	}

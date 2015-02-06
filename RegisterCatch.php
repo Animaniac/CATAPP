@@ -56,17 +56,12 @@ if ($stmt = $dbcon->prepare("SELECT username,email FROM users Where username= ? 
 		$accountl = 0;
 		$null = "{null}";
 		$empty ="";
-		$confirmation = rand();
 		include"connect.inc.php";
-	if ($stmt = $dbcon->prepare("INSERT INTO users(ID,email,username,password,accountL,confirmation,confcode) VALUES (?,?,?,?,?,?,?)")) 
+	if ($stmt = $dbcon->prepare("INSERT INTO users(ID,email,username,password,accountL,confirmation) VALUES (?,?,?,?,?,?,?)")) 
 		{
-			$stmt->bind_param('ssssiss',$null ,$email, $regUser, $regPass, $accountl, $null, $confirmation);
+			$stmt->bind_param('ssssiss',$null ,$email, $regUser, $regPass, $accountl, $null);
 			$stmt->execute();
 			$_SESSION['regUser'] = $regUser;
-			$subject = 'Do not reply - Account Confirmation';
-			$message = 'Welcome to the Cognitive Analytic Therapy App, to confirm your account please input:'."\r\n".$confirmation."\r\n".'on this page: http://homepages.shu.ac.uk/~b3006705/CATApp/confirm.html';
-			$headers = 'From: catapp@gmail.com';
-			mail($email, $subject, $message, $headers);
 			$state = array('success'=>2);
 			$result = array_merge($state, $emailValid, $regTaken, $emailTaken);
 			$result = json_encode($result);
