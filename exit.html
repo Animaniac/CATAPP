@@ -4,9 +4,13 @@
         <script type="text/javascript" charset="utf-8">
         $(document).ready(function()
 			{
-            function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
+            if(navigator.app)
+            {
+	        navigator.app.exitApp();
+			}
+			else if(navigator.device)
+			{
+			        navigator.device.exitApp();
+			}
             });
         </script>
