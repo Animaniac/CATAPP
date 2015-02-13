@@ -57,9 +57,9 @@ if ($stmt = $dbcon->prepare("SELECT username,email FROM users Where username= ? 
 		$null = "{null}";
 		$empty ="";
 		include"connect.inc.php";
-	if ($stmt = $dbcon->prepare("INSERT INTO users(ID,email,username,password,accountL) VALUES (?,?,?,?,?,?,?)")) 
+	if ($stmt = $dbcon->prepare("INSERT INTO users(ID,email,username,password,accountL) VALUES (?,?,?,?,?)")) 
 		{
-			$stmt->bind_param('ssssiss',$null ,$email, $regUser, $regPass, $accountl);
+			$stmt->bind_param('ssssi',$null ,$email, $regUser, $regPass, $accountl);
 			$stmt->execute();
 			$_SESSION['regUser'] = $regUser;
 			$state = array('success'=>2);

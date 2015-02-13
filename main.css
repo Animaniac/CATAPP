@@ -137,11 +137,54 @@ textarea #AdminL
 {
 	height:50%;
 }
-#letter
+.hiddenC
 {
 	width:90%;
 	margin:5%;
 	margin-top:0px;
 	padding:0px;
 	display:none;
+}
+#buffer
+{
+	height:50px;
+	width:100%;
+}
+.left
+{
+	float:left;
+	padding:0px;
+	margin:0px;
+	width:30%;
+	height:46px;
+	padding-top:18px;
+	text-align:center;
+	font-size:4vw;
+}
+.center
+{
+	float:left;
+	padding:0px;
+	margin:0px;
+	width:50%;
+	height:48px;
+	padding-top:16px;
+}
+.center input
+{
+	width:100%;
+}
+.right
+{
+	float:left;
+	padding:0px;
+	margin:0px;
+	width:20%;
+	height:64px;
+}
+.right img
+{
+	padding:10%;
+	width:75%;
+	height:75%;
 }

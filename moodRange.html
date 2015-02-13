@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html data-enhance="false">
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>
+	$(document).on('mobileinit', function () {
+	    $.mobile.ignoreContentEnabled = true;
+	});
+	</script>
+	<link rel="stylesheet" href="main.css"/>
+	</head>
+	<body>
+		<div id="banner"></div>
+			<img id="cat" src="images/logo.png">
+			<img id="nhs" src="images/nhs.png">
+		<article class="main">
+			<div id="buffer"></div>
+
+			<div class="left" id="Lhappy">
+				<lable>Happy:</lable>
+			</div>
+			<div class="center">
+				<input name="happy" id="happy" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rhappy">
+				<img id="happyImg" src="emo/happy.png">
+			</div>
+			<script>
+			$('#happy').on('change', function(){
+				var Fval = $('#happy').val()
+				if (Fval < 50)
+				{
+			    	$("#Rhappy").html('<img id="happyImg" src="emo/unhappy.png">');
+			    	$("#Lhappy").html('<lable>Unhappy:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rhappy").html('<img id="happyImg" src="emo/neutral.png">');
+					$("#Lhappy").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rhappy").html('<img id="happyImg" src="emo/happy.png">');
+					$("#Lhappy").html('<lable>Happy:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lclear">
+				<lable>Clear Headed:</lable>
+			</div>
+			<div class="center">
+				<input id="clear" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rclear">
+				<img id="clearImg" src="emo/clearHeaded.png">
+			</div>
+			<script>
+			$('#clear').on('change', function(){
+				var Fval = $('#clear').val()
+				if (Fval < 50)
+				{
+			    	$("#Rclear").html('<img id="clearImg" src="emo/confused.png">');
+			    	$("#Lclear").html('<lable>Confused:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rclear").html('<img id="clearImg" src="emo/neutral.png">');
+					$("#Lclear").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rclear").html('<img id="clearImg" src="emo/clearHeaded.png">');
+					$("#Lclear").html('<lable>Clear Headed:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lawake">
+				<lable>Awake:</lable>
+			</div>
+			<div class="center">
+				<input id="awake" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rawake">
+				<img id="awakeImg" src="emo/awake.png">
+			</div>
+			<script>
+			$('#awake').on('change', function(){
+				var Fval = $('#awake').val()
+				if (Fval < 50)
+				{
+			    	$("#Rawake").html('<img id="awakeImg" src="emo/tired.png">');
+			    	$("#Lawake").html('<lable>Tired:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rawake").html('<img id="awakeImg" src="emo/neutral.png">');
+					$("#Lawake").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rawake").html('<img id="awakeImg" src="emo/awake.png">');
+					$("#Lawake").html('<lable>Awake:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lcomfort">
+				<lable>Comfortable:</lable>
+			</div>
+			<div class="center">
+				<input id="comfort" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rcomfort">
+				<img id="comfortImg" src="emo/comfortable.png">
+			</div>
+			<script>
+			$('#comfort').on('change', function(){
+				var Fval = $('#comfort').val()
+				if (Fval < 50)
+				{
+			    	$("#Rcomfort").html('<img id="comfortImg" src="emo/worried.png">');
+			    	$("#Lcomfort").html('<lable>Worried:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rcomfort").html('<img id="comfortImg" src="emo/neutral.png">');
+					$("#Lcomfort").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rcomfort").html('<img id="comfortImg" src="emo/comfortable.png">');
+					$("#Lcomfort").html('<lable>Comfortable:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lcalm">
+				<lable>Calm:</lable>
+			</div>
+			<div class="center">
+				<input id="calm" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rcalm">
+				<img id="carlmImg" src="emo/calm.png">
+			</div>
+			<script>
+			$('#calm').on('change', function(){
+				var Fval = $('#calm').val()
+				if (Fval < 50)
+				{
+			    	$("#Rcalm").html('<img id="carlmImg" src="emo/angry.png">');
+			    	$("#Lcalm").html('<lable>Angry:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rcalm").html('<img id="carlmImg" src="emo/neutral.png">');
+					$("#Lcalm").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rcalm").html('<img id="carlmImg" src="emo/calm.png">');
+					$("#Lcalm").html('<lable>Calm:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lconfused">
+				<lable>Confused:</lable>
+			</div>
+			<div class="center">
+				<input id="confused" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rconfused">
+				<img id="confusedImg" src="emo/confused.png">
+			</div>
+			<script>
+			$('#confused').on('change', function(){
+				var Fval = $('#confused').val()
+				if (Fval < 50)
+				{
+			    	$("#Rconfused").html('<img id="confusedImg" src="emo/nevous.png">');
+			    	$("#Lconfused").html('<lable>Nevous:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rconfused").html('<img id="confusedImg" src="emo/neutral.png">');
+					$("#Lconfused").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rconfused").html('<img id="confusedImg" src="emo/confused.png">');
+					$("#Lconfused").html('<lable>Confused:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lkind">
+				<lable>Kind:</lable>
+			</div>
+			<div class="center">
+				<input id="kind" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rkind">
+				<img id="kindImg" src="emo/kind.png">
+			</div>
+			<script>
+			$('#kind').on('change', function(){
+				var Fval = $('#kind').val()
+				if (Fval < 50)
+				{
+			    	$("#Rkind").html('<img id="kindImg" src="emo/jealous.png">');
+			    	$("#Lkind").html('<lable>Jealous:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rkind").html('<img id="kindImg" src="emo/neutral.png">');
+					$("#Lkind").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rkind").html('<img id="kindImg" src="emo/kind.png">');
+					$("#Lkind").html('<lable>Kind:</lable>');
+				}
+			});
+			</script>
+			<div class="left" id="Lhope">
+				<lable>Hopful:</lable>
+			</div>
+			<div class="center">
+				<input id="hope" type="range" max="100" step="10" value="100"></input>
+			</div>
+			<div class="right" id="Rhope">
+				<img id="hopeImg" src="emo/hopeful.png">
+			</div>
+			<script>
+			$('#hope').on('change', function(){
+				var Fval = $('#hope').val()
+				if (Fval < 50)
+				{
+			    	$("#Rhope").html('<img id="hopeImg" src="emo/depressed.png">');
+			    	$("#Lhope").html('<lable>Depressed:</lable>');
+				}
+				else if (Fval == 50)
+				{
+					$("#Rhope").html('<img id="hopeImg" src="emo/neutral.png">');
+					$("#Lhope").html('<lable>Neutral:</lable>');
+				}
+				else
+				{
+					$("#Rhope").html('<img id="hopeImg" src="emo/hopeful.png">');
+					$("#Lhope").html('<lable>Hopful:</lable>');
+				}
+			});
+			</script>
+		</article>
+		<nav>
+			<a href="home.html"><div id="home"><img src="images/homeNav.png"></div></a>
+			<a href="sessionM.html"><div id="home"><img src="images/noteNav.png"></div></a>
+			<a href="alarm.html"><div id="home"><img src="images/clockNav.png"></div></a>
+			<a href="settings.html"><div id="home"><img src="images/settingsNav.png"></div></a>
+			<a href="exit.html"><div id="home"><img src="images/exitNav.png"></div></a>
+		</nav>
+	</body>
+</html>

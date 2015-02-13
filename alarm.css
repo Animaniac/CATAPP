@@ -1,3 +1,5 @@
+body
+{overflow:hidden;}
 #banner {
 	padding-top: 10px;
 }
@@ -45,6 +47,7 @@
 	height:10%;
 	width:95%;
 	margin-top:5px;
+	clear: right;
 }
 #l2
 {
@@ -85,7 +88,7 @@ footer
 	padding-bottom:50px;
 	bottom:5%;
 }
-#back
+#backup
 {
 	float:left;
 	background-color:white;

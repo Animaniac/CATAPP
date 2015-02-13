@@ -3,18 +3,8 @@
 	<title>&nbsp;</title>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script>
-	$(document).on('mobileinit', function () {
-	    $.mobile.ignoreContentEnabled = true;
-	});
-	</script>
-	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
-
-	<link rel="stylesheet" href="main.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="main.css"/>
 		<link rel="stylesheet" href="home.css"/>
 	</head>
@@ -64,9 +54,10 @@
 			<a href="settings.html"><div id="home"><img src="images/settingsNav.png"></div></a>
 			<a href="exit.html"><div id="home"><img src="images/exitNav.png"></div></a>
 		</nav>
-		<script>
-			$(document).ready(function(){
-			navigator.app.exitApp()})
-		</script>
 	</body>
+	<script>
+		$(document).bind("mobileinit", function() {
+  		$.mobile.ajaxEnabled = false;
+		});
+		</script>
 </html>

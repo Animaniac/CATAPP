@@ -29,8 +29,8 @@
 				{
 					$.each(myData, function(key, value) {   
 					     $('#mySelect')
-					          .append($('<option>', { value : key })
-					          .text(value)); 
+					     	.append($('<option>', { value : key })
+					     	.text(value));
 					});
 				});
 			});
@@ -39,43 +39,67 @@
 			<img id="cat" src="images/logo.png">
 			<img id="nhs" src="images/nhs.png">
 		<article class="main">
-			<u><h2>Patients</h2></u>
+			<u><h2>Target Problem Procedure</h2></u>
 			<form id="alarmSettings">
 		<div class="content" id="l">
 			<div class="content" id="s"><lable>Username:</lable></div>
 			<div class="content" id="m">
 				<select id ="mySelect">
-				</select>
+				</select>				
 			</div>
-			<div id="input">
-			<script>
-			$(document).ready(function(){
-				$('#mySelect').change(function(ev){
-					ev.preventDefault();
-					var patient = $('#mySelect option:selected').text();
-					var form = {}
-					form['patient'] = patient;
-				$.ajax({
-					type: 'post',
-					url: "http://catapp.addwebdesign.co.uk/patientData.php",
-					dataType : 'json',
-					data: form,
-					cache: false,
-					context: document.body
-				}).done(function(myData)
-				{
-					$('#input').html('<div class="content" id="l"><div class="content" id="s"><lable>Email address:</lable></div><div class="content" id="m"><h3>'+ myData.email +'</h3></div></div><br><div class="content" id="l"><div class="content" id="s"><lable>Last active:</lable></div><div class="content" id="m"><h3>'+ myData.lastActive +'</h3></div></div>');
-						});
-					});
-				});
-		</script>
-	</div>
-		</form>
+		</div>
+		<div class="content" id="l">
+			<div class="content" id="s"><lable>Title:</lable></div>
+			<div class="content" id="m">
+				<input type="text" name="title" id="title">	
+			</div>
+		</div>
+		<u><h2 id="letter">breakdown:</h2></u>
+			<textarea rows="12" name="post" id="AdminS"></textarea>
+			<div id="feedback"></div>
+			</form>
 		<footer>
 			<form action="admin.html">
 				<button name="backup" id="backup" class="buttonStyle"></button>
 			</form>
 				<button name="save" id="save" class="buttonStyle"></button>
+				<script>
+				$(document).ready(function(){
+				$('#save').click(function (ev){
+					ev.preventDefault();
+					var patient = $('#mySelect option:selected').text();
+					var title = $('#title').val();
+					var breakdown = $('#AdminS').val();
+					if (title == null || title == "")
+					{$('#feedback').html("You forgot the title!");}
+					else if (breakdown == null || breakdown == "")
+					{$('#feedback').html("You forgot the breakdown!");}
+					else{
+					var form = {}
+					form['patient'] = patient;
+					form['title'] = title;
+					form['breakdown'] = breakdown;
+						$.ajax({
+						  type: 'post',
+						  url: "http://catapp.addwebdesign.co.uk/TPPupload.php",
+						  dataType : 'json',
+						  data: form,
+						  cache: false,
+						  context: document.body
+						}).done(function(myData){
+							console.info(myData);
+							if(myData.state == "Success!")
+								{
+									$('#feedback').html("TPP breakdown sent");
+								}
+								else
+								{
+									$('#feedback').html("Server not reasponding");
+								}
+						});}
+					});
+					});
+				</script>
 			</footer>
 		</article>
 		<nav>
